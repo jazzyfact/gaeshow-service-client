@@ -1,0 +1,40 @@
+{
+    "name": "web-shopping-mall",
+    "version": "1.0.0",
+    "description": "gaeshow",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "build": "pm2 start app.js",
+        "test": "nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/startup-life/web-shopping-mall.git"
+    },
+    "keywords": [
+        "metaler"
+    ],
+    "author": "void",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/startup-life/web-shopping-mall/issues"
+    },
+    "homepage": "https://github.com/startup-life/web-shopping-mall#readme",
+    "dependencies": {
+        "@babel/polyfill": "^7.10.1",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.10.3",
+        "@babel/core": "^7.10.3",
+        "@babel/preset-env": "^7.10.3",
+        "babel-eslint": "^10.1.0",
+        "babel-plugin-module-resolver": "^4.0.0",
+        "eslint": "^7.3.1",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-import-resolver-babel-module": "^5.1.2",
+        "eslint-plugin-import": "^2.21.2",
+        "prettier": "2.0.5"
+    }
+}

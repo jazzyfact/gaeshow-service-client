@@ -1,0 +1,375 @@
+@import './reset';
+@import './ui';
+@import './default.scss';
+
+.body__item:nth-child(1) {
+    grid-column: 1 / span 6;
+}
+.body__item:nth-child(2) {
+    grid-column: 1 / span 6;
+}
+
+.body__item:nth-child(3) {
+    grid-column: 1 / span 6;
+}
+.body__item:nth-child(4) {
+    grid-column: 1 / span 6;
+}
+
+// 네비게이션 커스텀 디자인
+.nav {
+    margin: 0 16.6%;
+    flex-direction: column;
+    border: none;
+    .nav__main {
+        width: 100%;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 1px solid #000000;
+        .nav__item--icon {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            * {
+                margin-right: 10px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1rem;
+                color: #a3a3a3;
+            }
+        }
+        .nav__item--link {
+            flex: 1;
+            a {
+                color: #000000;
+                text-decoration: none;
+                font-size: 1.2rem;
+                font-weight: bold;
+                padding: 0 20px;
+            }
+        }
+        .nav__item--search {
+            display: flex;
+            flex-direction: row;
+            border: solid 1px #707070;
+            border-radius: 30px;
+            margin: 0 10px;
+            padding: 5px 10px;
+            figure {
+                display: flex;
+                align-items: center;
+                img {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+
+            input {
+                border: none;
+            }
+            input:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .nav__sub {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 1em 0;
+        border-bottom: 1px solid #a3a3a3;
+        justify-content: flex-start;
+
+        > a {
+            text-decoration: none;
+            font-size: 1.15rem;
+            color: #a3a3a3;
+            padding: 0.5rem 1rem;
+        }
+        > .focus {
+            font-weight: bold;
+            color: black;
+        }
+    }
+}
+
+.main {
+    margin: 3rem 16.6%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    > * {
+        margin-bottom: 2rem;
+    }
+    .header {
+        display: block;
+        background-color: #ffffff;
+        font-size: $section__header--title--size;
+        width: 100%;
+    }
+    .p__warning {
+        &--bold {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .input__signup {
+        &--text {
+            font-size: 1.2rem;
+            width: 100%;
+            height: 2.5rem;
+            padding: 0.5rem 0 0.5rem 0.5rem;
+
+            border: 1px solid black;
+
+            ::placeholder {
+                color: #909091;
+            }
+        }
+
+        &--textarea {
+            width: 100%;
+            min-height: 30rem;
+        }
+
+        &--tag {
+            > div {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+
+                > * {
+                    margin-right: 1rem;
+                    padding: 0.5rem 1rem;
+                    border-radius: 1rem;
+                }
+
+                > input {
+                    width: 4rem;
+                    border: 1px solid #e7e7e7;
+                    background-color: #f2f2f2;
+                }
+
+                > p {
+                    font-size: 1.2rem;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    .add {
+        background-color: black;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        min-height: 4rem;
+        margin: 3rem 0 10rem 0;
+    }
+
+    .workspace {
+        position: relative;
+        &__imgWrap {
+            width: 100%;
+            min-height: 35rem;
+            position: relative;
+            &__img {
+                width: 100%;
+                min-height: 35rem;
+            }
+            > label {
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 0.8rem 1rem;
+                border: 1px solid black;
+                background-color: black;
+                color: white;
+            }
+            > p {
+                position: absolute;
+                bottom: 1rem;
+                left: 1rem;
+                background-color: rgba(0, 0, 0, 0.8);
+                padding: 0.5rem 1rem;
+                border-radius: 1rem;
+                font-size: 1.2rem;
+                color: white;
+                > b {
+                    color: #ff8383;
+                }
+            }
+        }
+        &__items {
+            z-index: 1;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            > label {
+                cursor: pointer;
+                width: 2rem;
+                height: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                border: 1px solid white;
+                background-color: black;
+                color: white;
+                transform: translate(-50%, -50%);
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+            &--add {
+                transform: translate(0, -2rem);
+                background-color: white;
+                border: 1px solid gray;
+                border-radius: 0.5rem;
+                padding: 1rem;
+
+                display: flex;
+                flex-direction: column;
+
+                &--title {
+                    font-size: 1.5rem;
+                }
+                &--inputWrap {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    border: 1px solid black;
+                    margin: 1rem 0;
+                    padding: 0.5rem 1rem;
+
+                    > img {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        margin-right: 0.5rem;
+                    }
+                    > input {
+                        font-size: 1.2rem;
+                        border: none;
+                    }
+                    > input:focus {
+                        outline: none;
+                        border: none;
+                    }
+                }
+                &--change {
+                    align-self: flex-end;
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+
+                &--btn {
+                    background-color: black;
+                    color: white;
+                    height: 3rem;
+                    font-size: 1.2rem;
+                    margin-top: 1rem;
+                }
+                > ul {
+                    display: flex;
+                    flex-direction: column;
+                    > figure {
+                        margin: 1rem 0;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        > img {
+                            width: 5rem;
+                            height: 5rem;
+                            margin-right: 1rem;
+                        }
+                        > figcaption {
+                            height: 100%;
+                            min-width: 10rem;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+
+                            .title {
+                                font-size: 1.2rem;
+                                color: gray;
+                                font-weight: 300;
+                            }
+                            .price {
+                                font-size: 1.2rem;
+                                font-weight: bold;
+                                margin: 0.5rem 0;
+                            }
+                            > button {
+                                margin: 0;
+                                padding: 0;
+                                font-size: 1.2rem;
+                                background-color: black;
+                                color: white;
+                                padding: 0.1rem 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__label {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 3rem;
+            font-size: 2rem;
+            width: 100%;
+            height: 35rem;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        &__input {
+            width: 1px;
+        }
+    }
+}
+
+@include desktop {
+    body {
+        .main {
+            margin: 1% 2% !important;
+            padding: 0 3% !important;
+        }
+    }
+}
+
+@include bigTablet {
+    body {
+        .main {
+            margin: 1% 1% !important;
+            padding: 0 3% !important;
+        }
+    }
+}
+@include mobile {
+    body {
+        .main {
+            margin: 1% 2% !important;
+            padding: 0 0 !important;
+        }
+    }
+    #selectLabel {
+        height: 20rem;
+    }
+    #selecImgWrap {
+        min-height: 20rem;
+    }
+}

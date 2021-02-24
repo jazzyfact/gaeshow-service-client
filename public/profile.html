@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/mypage.css">
+
+    <script>
+        window.GitpleConfig = {
+            appCode: '6EqaYP5HzUQ7wAiVDNMqvuQcQT2tf3',
+            userLnag: 'ko'
+        };
+        !function () { function e() { function e() { var e = t.contentDocument, a = e.createElement("script"); a.type = "text/javascript", a.async = !0, a.src = window[n] && window[n].url ? window[n].url + "/inapp-web/gitple-loader.js" : "https://app.gitple.io/inapp-web/gitple-loader.js", a.charset = "UTF-8", e.head && e.head.appendChild(a) } var t = document.getElementById(a); t || ((t = document.createElement("iframe")).id = a, t.style.display = "none", t.style.width = "0", t.style.height = "0", t.addEventListener ? t.addEventListener("load", e, !1) : t.attachEvent ? t.attachEvent("onload", e) : t.onload = e, document.body.appendChild(t)) } var t = window, n = "GitpleConfig", a = "gitple-loader-frame"; if (!window.Gitple) { document; var i = function () { i.ex && i.ex(arguments) }; i.q = [], i.ex = function (e) { i.processApi ? i.processApi.apply(void 0, e) : i.q && i.q.push(e) }, window.Gitple = i, t.attachEvent ? t.attachEvent("onload", e) : t.addEventListener("load", e, !1) } }();
+    </script>
+</head>
+
+<body>
+    <header class="body__item header" id="headerBanner"></header>
+    <nav class="body__item nav" id="headerNav"></nav>
+    <main class="body__item main">
+        <section class="profile__item" id="userInfo">
+            <img class="profile__item--img" id="profileImg" src="./res/img/icon_default_img.png" alt="profile img" />
+            <div>
+                <h3 class="profile__item--nick" id="nickname"></h3>
+                <p class="profile__item--email" id="email"></p>
+                <p class="profile__item--description" id="info"></p>
+                <div class="profile__item--wrapper">
+                    <div class="profile__item--edit" id="modifyBtn" style="display: none;">수정하기</div>
+                    <div class="profile__item--edit" id="logoutBtn" style="display: none;">로그아웃</div>
+                    <div class="profile__item--edit" id="followBtn" style="display: none;">팔로우</div>
+                </div>
+
+                <div class="profile__item--sosial">
+                    <div class="profile__item--sosial--follow">
+                        <p class="profile__item--sosial--follow--title">Following</p>
+                        <p class="profile__item--sosial--follow--number" id="follows">0</p>
+                    </div>
+                    <div class="profile__item--sosial--gard"></div>
+                    <div class="profile__item--sosial--follow">
+                        <p class="profile__item--sosial--follow--title">Follower</p>
+                        <p class="profile__item--sosial--follow--number" id="followers">0</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tabs">
+            <a class="focus" id="userPost">활동내역보기</a>
+            <a id="bookmarkPost">북마크한 게시물 보기</a>
+        </section>
+        <section class="work__item">
+            <header class="work__item--header">
+                <h3 id="workspaceTitle">작성한 워크스페이스</h3>
+                <p>전체 <b id="workspaceCount">0</b>개</p>
+            </header>
+            <div class="work__item--body" id="workWrap"></div>
+            <section class='paging'>
+                <div class="body__item--paging" id="workPage"></div>
+            </section>
+        </section>
+        <section class="boast__item">
+            <header class="boast__item--header">
+                <h3 id="myPostTitle">작성한 게시물</h3>
+                <p>
+                    전체 <b id="portfolioCount">0</b>개
+                </p>
+            </header>
+            <div class="boast__item--body" id="portfolioWrap"></div>
+            <section class='paging'>
+                <div class="body__item--paging" id="portfolioPage"></div>
+            </section>
+
+        </section>
+    </main>
+    <footer class="body__item footer" id="footer"></footer>
+</body>
+
+<script type="module" src="./js/on.load.js"></script>
+
+</html>

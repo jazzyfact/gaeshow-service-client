@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/salary.css">
+    <script src="http://d3js.org/d3.v5.min.js"></script>
+    <script>
+        window.GitpleConfig = {
+            appCode: '6EqaYP5HzUQ7wAiVDNMqvuQcQT2tf3',
+            userLnag: 'ko'
+        };
+        !function () { function e() { function e() { var e = t.contentDocument, a = e.createElement("script"); a.type = "text/javascript", a.async = !0, a.src = window[n] && window[n].url ? window[n].url + "/inapp-web/gitple-loader.js" : "https://app.gitple.io/inapp-web/gitple-loader.js", a.charset = "UTF-8", e.head && e.head.appendChild(a) } var t = document.getElementById(a); t || ((t = document.createElement("iframe")).id = a, t.style.display = "none", t.style.width = "0", t.style.height = "0", t.addEventListener ? t.addEventListener("load", e, !1) : t.attachEvent ? t.attachEvent("onload", e) : t.onload = e, document.body.appendChild(t)) } var t = window, n = "GitpleConfig", a = "gitple-loader-frame"; if (!window.Gitple) { document; var i = function () { i.ex && i.ex(arguments) }; i.q = [], i.ex = function (e) { i.processApi ? i.processApi.apply(void 0, e) : i.q && i.q.push(e) }, window.Gitple = i, t.attachEvent ? t.attachEvent("onload", e) : t.addEventListener("load", e, !1) } }();
+    </script>
+</head>
+
+<body>
+    <header class="body__item header" id="headerBanner"></header>
+    <nav class="body__item nav" id="headerNav"></nav>
+    <main class="body__item main">
+        <header class="header">
+            <h3 id="cateTitle"></h3>
+            <p id="cateExplain"></p>
+        </header>
+        <section class="salary">
+            <h3 id="avgSalary"></h3>
+            <div class="salary__ex"></div>
+            <div class="salary__select">
+                <label>▼</label>
+                <select id="exSelector">
+                    <option value="99" selected>전체</option>
+                    <option value="0">신입</option>
+                    <option value="1">1년</option>
+                    <option value="2">2년</option>
+                    <option value="3">3년</option>
+                    <option value="4">4년</option>
+                    <option value="5">5년</option>
+                    <option value="6">6년</option>
+                    <option value="7">7년</option>
+                    <option value="8">8년</option>
+                    <option value="9">9년</option>
+                    <option value="10">10년 이상</option>
+                </select>
+            </div>
+            <div class="salary__select">
+                <label>▼</label>
+                <select id="jobSelector">
+                    <option value="job_type" selected>직군별</option>
+                    <option value="job_field">분야별</option>
+                </select>
+            </div>
+        </section>
+        <section id="chartWrap">
+            <section class="chart" id="chart"></section>
+        </section>
+        <section class="top">
+            <h3>연봉 TOP3 직군</h3>
+            <ul id="salaryTop3Wrap"></ul>
+        </section>
+    </main>
+    <footer class="body__item footer" id="footer"></footer>
+</body>
+
+<script type="module" src="./js/on.load.js"></script>
+
+
+</html>

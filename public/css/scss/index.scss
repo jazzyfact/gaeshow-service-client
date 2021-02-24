@@ -1,0 +1,2399 @@
+@import './reset';
+@import './ui';
+@import './default.scss';
+
+// 영역 구분
+// .body__item:nth-child(1) {
+//     grid-column: 1 / span 6; //1열부터 6칸 합치기(헷갈린다.. 그림으로 이해햐기)
+// }
+// .body__item:nth-child(2) {
+//     grid-column: 1 / span 6;
+// }
+// .body__item:nth-child(3) {
+
+//     display: grid;
+//     grid-template-rows: repeat(5, 650px);
+// }
+// .body__item:nth-child(4) {
+//     grid-column: 2 / span 4; //2열부터 4칸
+//     display: grid;
+//     grid-template-rows: repeat(5, 650px);
+// }
+// .body__item:nth-child(5) {
+//     display: grid;
+//     grid-template-rows: repeat(5, 650px);
+// }
+// .body__item:nth-child(6) {
+//     grid-column: 1 / span 6;
+// }
+// // 먼저 배경 색 지정
+// .article__item:nth-child(1) {
+//     grid-row: 3 / 4; //그리드 라인 번호,row 3번에서 4번까지
+//     margin: 4rem 0;
+//     background-color: #f8f8fa;
+// }
+// .main__workspace {
+//     //오늘의 워크스페이스, 인기 워크스페이스
+//     background-color: #f8f8fa;
+// }
+
+.body__item:nth-child(1) {
+    grid-column: 1 / span 6;
+}
+.body__item:nth-child(2) {
+    grid-column: 1 / span 6;
+}
+.body__item:nth-child(3) {
+    grid-column: 2 / span 4;
+}
+.body__item:nth-child(4) {
+    grid-column: 6 / span 7;
+}
+.body__item:nth-child(5) {
+    grid-column: 1 / span 6;
+}
+// 메인
+.main {
+    display: flex;
+    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(5, 650px);
+
+    section {
+        margin: 4rem 0;
+    }
+
+    //첫번째 상품 리뷰
+    .main__review--frist {
+        display: hidden;
+        top: 0;
+        right: 30;
+        z-index: 1;
+        font-size: 2rem;
+        //테스트용
+        // width: 30%;,48
+        // height: 50%;,88
+        width: 48%;
+        height: 88%;
+        position: absolute;
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: transparent;
+        // color: black;
+        line-height: 1.33;
+        letter-spacing: -0.42px;
+        cursor: pointer;
+        //...표시
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    //첫번째 상품 리뷰 호버
+    .main__review--frist:hover {
+        top: 0;
+        right: 30;
+        z-index: 1;
+        font-size: 1.5rem;
+        //테스트용
+        // width: 30%;
+        // height: 50%;
+        // width: 48.8%;
+        // height: 88%;
+        width: 48%;
+        // grid-gap: 0 1rem;
+        height: 88%;
+        position: absolute;
+        display: inline-block;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        // color: black;
+        line-height: 1.33;
+        font-weight: bold;
+        letter-spacing: -0.42px;
+        cursor: pointer;
+        opacity: 0.9;
+        //...표시
+        //      white-space: nowrap;
+        //      overflow: hidden;
+        //      text-overflow: ellipsis;
+    }
+    //상품 타이틀
+    //첫번째의 2번째
+    .main__review--frist--title {
+        margin-top: 8rem;
+        margin-left: 13rem;
+        width: 200px;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        font-size: 17px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        margin: 20px 0 0 0;
+        //말줄임
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    //첫번째의 2번째
+    .main__review--frist--one {
+        // margin-left: 13rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        position: relative;
+        color: #fff;
+        width: 250px;
+        padding: 0 40px 0 160px; //상우하좌
+        text-align: start;
+        //말줄임
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .main__review--frist--two {
+        font-size: 1.6rem;
+        font-weight: bold;
+        position: relative;
+        color: #fff;
+        width: 250px;
+        padding: 0 40px 0 160px; //상우하좌
+        text-align: start;
+        //말줄임
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .main__review--frist--three {
+        font-size: 1.6rem;
+        font-weight: bold;
+        position: relative;
+        color: #fff;
+        width: 250px;
+        padding: 0 40px 0 160px; //상우하좌
+        text-align: start;
+        //말줄임
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    //두번째 상품 리뷰
+    .main__review--two {
+        display: inline-block;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        //테스트용
+        // width: 30%;,48
+        // height: 50%;,88
+        width: 48%;
+        height: 88%;
+        position: absolute;
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: transparent;
+        // color: black;
+        line-height: 1.33;
+        letter-spacing: -0.42px;
+        cursor: pointer;
+    }
+    //두번째 상품 리뷰 호버
+    .main__review--two:hover {
+        // display: hidden;
+        // padding : 0 -11px 0 10px;
+        display: inline-block;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        font-size: 1.5rem;
+        //테스트용
+        // width: 30%;
+        // height: 50%;
+        // width: 48.8%;
+        // height: 88%;
+        width: 48%;
+        // grid-gap: 0 1rem;
+        position: absolute;
+        display: inline-block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        // color: black;
+        line-height: 1.33;
+        font-weight: bold;
+        letter-spacing: -0.42px;
+        cursor: pointer;
+        opacity: 0.9;
+    }
+
+    .main__review--frist .caption {
+        // width: 400px;
+        // height: 266px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+    }
+    .main__review--frist .content_bg {
+        display: block;
+        position: relative;
+    }
+    .main__review--frist .caption_title {
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 15px;
+        background: rgb(0, 0, 0);
+        // margin: 20px 0 0 0;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    //2번째 상품 리뷰
+    .main__review--two .caption {
+        // width: 400px;
+        // height: 266px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+    }
+    .main__review--two .content_bg {
+        display: block;
+        position: relative;
+    }
+    .main__review--two .caption_title {
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 15px;
+        background: rgb(0, 0, 0);
+        // margin: 20px 0 0 0;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    //마우스 호버했을 때 효과
+    .hover_effect .content_bg {
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        -ms-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+    .hover_effect .caption {
+        -ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=0)';
+        filter: alpha(opacity=0);
+        opacity: 0;
+        background-color: rgba(2, 2, 2, 0.747);
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+    .hover_effect .caption_title {
+        -webkit-transform: translateY(-100px);
+        -moz-transform: translateY(-100px);
+        -o-transform: translateY(-100px);
+        -ms-transform: translateY(-100px);
+        transform: translateY(-100px);
+        -ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=0)';
+        filter: alpha(opacity=0);
+        opacity: 0;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    .hover_effect .main__review--frist--one {
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        -o-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        transform: translateY(100px);
+        -ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=0)';
+        filter: alpha(opacity=0);
+        opacity: 0;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        -ms-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+    .hover_effect:hover .content_bg {
+        -webkit-transform: scale(1.1, 1.1);
+        -moz-transform: scale(1.1, 1.1);
+        -o-transform: scale(1.1, 1.1);
+        -ms-transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1);
+    }
+
+    .hover_effect:hover .caption {
+        -ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=100)';
+        filter: alpha(opacity=100);
+        opacity: 1;
+    }
+    .hover_effect:hover .caption_title,
+    .hover_effect:hover .main__review--frist--one {
+        -ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=100)';
+        filter: alpha(opacity=100);
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    .hover_effect:hover .main__review--frist--one {
+        -webkit-transition-delay: 0.1s;
+        -moz-transition-delay: 0.1s;
+        -o-transition-delay: 0.1s;
+        -ms-transition-delay: 0.1s;
+        transition-delay: 0.1s;
+    }
+
+    ////마우스호버시 종료
+
+    //최상단 상품
+    .main__photo {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 4rem 3rem;
+        margin-bottom: 5rem;
+
+        span {
+            //메인 사진 2개 사이 20px 만큼 띄워주기
+            width: 20px;
+        }
+
+        > a:hover {
+            // border: 3px solid #dcdcdc;
+        }
+        > a {
+            border: 3px solid transparent;
+            cursor: pointer;
+            color: transparent;
+            text-decoration: none;
+
+            //figure
+            .main__photo--wrapper {
+                // display: flex;
+                // position: relative;
+                // flex: 1; // 1은 flex-grow 와 같음, 아이템 증가 너비 비율, 기본값은 0
+                // justify-content: space-around;
+
+                //img
+                .main__photo--titleImg {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute; //자식
+                    object-fit: fill;
+                }
+
+                figcaption {
+                    //메인 사진과는 별개로 사진 위에 적용되는 요소들(사진 제목, 사진 닉넴)
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.5) 10%);
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    object-fit: contain;
+                    color: #ffffff;
+                    line-height: 1.33;
+                    font-weight: 200;
+                    letter-spacing: -0.42px;
+                    * {
+                        padding: 3px 0;
+                    }
+                    .main__photo--titleStr {
+                        //사진위에 올라가는 타이틀
+                        font-size: 1.6rem;
+                        margin-left: 20px;
+                    }
+
+                    .main__photo--wrapper--profile {
+                        //사진 위에 올라가는 닉
+                        display: flex;
+                        flex-direction: row;
+                        // margin-left: 20px;
+                        margin-bottom: 10px;
+
+                        // img {
+                        //     width: 24px;
+                        //     height: 24px;
+                        //     border-radius: 50%;
+                        // }
+                        p {
+                            display: flex;
+                            align-items: center;
+                            font-size: 1.2rem;
+                            margin-left: 10px;
+                            padding-left: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 추천 상품
+    .main__recommend {
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            * {
+                padding: 3px 0;
+            }
+
+            .main__recommend--title {
+                font-size: $section__header--title--size;
+                font-weight: bold;
+            }
+            .main__recommend--subTitle {
+                font-size: $section__header--subTitle--size;
+                font-weight: 300;
+                color: #909091;
+            }
+        }
+
+        .main__recommend--category {
+            display: flex;
+            flex-direction: row;
+            margin: 20px 0; //상하 좌우 같게
+            li {
+                //전체보기, 모니터, 키보드 .... .etc
+                margin: 0 20px 0 0; // 위 0 오른쪽 20px 왼쪽 0 밑 0
+                padding: 5px 15px;
+                font-size: 1.3rem;
+                font-weight: 500;
+                cursor: pointer;
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+            }
+
+            .selected {
+                border: solid 2px #dadadd; //글자 위 테두리
+                border-radius: 30px;
+            }
+        }
+
+        .main__recommend--items {
+            //개쇼 추천 상품 리스트
+            // display: flex;
+            // flex-direction: row;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 4rem 2rem;
+            margin-bottom: 5rem;
+
+            // * {
+            //     margin-top: 5px;
+            // }
+            // section {
+            //     flex: 1;
+            //     padding: 5px;
+            > div {
+                h3 {
+                    font-size: 2rem;
+                    margin-top: 1.5rem;
+                }
+            }
+            > a:hover {
+                border: 1px solid #dcdcdc;
+            }
+            > a {
+                border: 1px solid transparent;
+                cursor: pointer;
+                color: black;
+                text-decoration: none;
+                .main__recommend--titleImg {
+                    position: relative;
+                    figcaption {
+                        display: flex;
+                        flex-direction: row;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        z-index: 1;
+
+                        * {
+                            padding: 3px 5px;
+                            margin: 10px 5px;
+                            border: solid 1px #707070;
+                            border-radius: 14px;
+                            background-color: #fff;
+                        }
+                    }
+                    width: 100%;
+                    height: 20rem;
+                    img {
+                        width: 100%;
+                        height: 20rem;
+                        object-fit: fill;
+                        // margin-top: 1.5rem;
+                    }
+                }
+                .main__recommend--titleImg {
+                    position: relative;
+                    margin-bottom: 1rem;
+                    figcaption {
+                        //추천 상품 사진과는 별개로 사진 위에 적용되는 요소들
+                        display: flex;
+                        flex-direction: row;
+                        position: absolute; //가장 가까운 부모에 배치, 없으면 컨테이너
+                        top: 0;
+                        right: 0;
+                        z-index: 1; //맨 위로 올라감
+
+                        * {
+                            padding: 5px;
+                            margin: 10px 5px;
+                            border: solid 1px #707070;
+                            border-radius: 14px;
+                        }
+                    }
+                    img {
+                        width: 100%;
+                        height: 20rem;
+                        object-fit: fill;
+                    }
+                }
+                .main__recommend--titleStr {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                }
+                .main__recommend--subTitle--wrapper {
+                    //상품 가격과 평점 배치
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-top: 0.5rem;
+
+                    .main__recommend--subTitle--price {
+                        flex: 1;
+                        font-size: 2rem;
+                        font-weight: bold;
+                    }
+
+                    .main__recommend--subTitle--point {
+                        //리뷰 평점
+                        font-size: 1.1rem;
+                        font-weight: 500;
+                        color: #7c7c7c;
+                    }
+                }
+                .main__recoomend--subTitles {
+                    //구매전 기대평
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    margin-top: 0.5rem;
+                    b {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    // 워크스페이스 추천란
+    .main__workspace {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px; //오늘의 워크스페이스 와 인기워크스페이스 10px 만큼 띄우기
+
+        .main__workspace:nth-child(1) {
+            grid-column: 1 / 1;
+        }
+        .main__workspace:nth-child(2) {
+            grid-column: 1 / 1;
+        }
+
+        .main__workspace--item--wrapper {
+            margin: 3rem 0;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 1fr 2fr 2fr 0.5fr; //비율 1 : 2 : 2 : 0.5
+            gap: 10px;
+            cursor: pointer;
+
+            .main__workspace--item:nth-child(1) {
+                grid-column: 1 / 6; //1열부터 6열까지
+                grid-row: 1 / 2; //1행부터 2행까지
+                display: flex;
+                align-items: flex-end; //아래쪽
+                margin: auto 0;
+
+                font-size: $section__header--title--size;
+                p {
+                    margin-left: 1rem;
+                    font-size: $section__header--subTitle--size;
+                    color: #909091;
+                }
+            }
+            //오늘의 워크스페이스 사진 크기는 칼럼과 로우 숫자 별로 다 다르다
+            .main__workspace--item:nth-child(2) {
+                grid-column: 1 / 4;
+                grid-row: 2 / 4;
+            }
+            .main__workspace--item:nth-child(3) {
+                grid-column: 4 / 6;
+                grid-row: 2 / 3;
+            }
+            .main__workspace--item:nth-child(4) {
+                grid-column: 4 / 6;
+                grid-row: 3 / 4;
+            }
+
+            figure {
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+                .main__workspace--img--background {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1; //맨위로
+                }
+                figcaption {
+                    //사진 위에 오는 요소들
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 15%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.5) 15%);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-rows: repeat(8, 1fr);
+                    gap: 5px;
+                }
+
+                .main__workspace--item--big:nth-child(1) {
+                    grid-column: 1 / 6;
+                    grid-row: 1 / 2;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end; //뒤쪽
+                    color: #ffffff; //글씨색상
+                    font-size: 1.2rem;
+                    margin: auto 0;
+                    div {
+                        margin: 5px;
+                        padding: 3px 10px;
+                        display: flex;
+                        border: 1px solid #ffffff; //테두리
+                        border-radius: 1rem; //라운드
+                    }
+                    img {
+                        margin-right: 1rem;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        filter: invert(100%);
+                    }
+                }
+                //첫번째 큰사진
+                .main__workspace--item--big:nth-child(2) {
+                    grid-column: 1 / 6; //가 x 세 사진 크기
+                    grid-row: 7 / 8;
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    color: #ffffff;
+                    margin: 0 10px; //상하 좌우 같음 10px 띄워주기
+                    margin-top: 5rem;
+                    h3 {
+                        flex: 1; //flex-grow 1 같음, 넓이 증가 비율이 1
+                        font-size: 1.2rem;
+                        //첫번째타이틀제목
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    img {
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 50%; //원형
+                        margin-right: 5px;
+                    }
+                }
+                .main__workspace--item--big:nth-child(3) {
+                    grid-column: 1 / 6; //사진 크기
+                    grid-row: 8 / 9;
+
+                    margin: 0 10px; // 상하 좌우 비율 같게 10px 띄워주기
+
+                    display: flex;
+                    flex-direction: row;
+
+                    color: #ffffff;
+                    font-size: 1.2rem;
+
+                    p {
+                        //공유,댓글,조회수
+                        margin-right: 10px;
+                    }
+                }
+                //작은 사진
+                .main__workspace--item--small {
+                    grid-column: 1 / 6;
+                    grid-row: 7 / 9;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    max-width: 100%;
+                    color: #ffffff;
+                    * {
+                        margin: 0 5px;
+                    }
+                    h3 {
+                        //두번째 타이틀
+                        //제목
+                        position: relative;
+                        flex: 1; //flex-grow 1 같음, 넓이 증가 비율이 1
+                        font-size: 1.4rem;
+                        width: 70%;
+                        text-overflow: ellipsis; //글자 넓이가 70% 넘어서면 말 줄임(생략표시)
+                        white-space: nowrap; //공백을 여러개 넣어도 1개만 보여줌, 텍스트 길어도 줄바꾸 없음
+                        overflow: hidden; //내용이 넘치면 자름
+                    }
+                    img {
+                        //프로필
+                        width: 1.7rem;
+                        height: 1.7rem;
+                        border-radius: 50%;
+                    }
+                    p {
+                        //닉
+                        width: 20%;
+                        text-overflow: ellipsis; //글자 넓이가 70% 넘어서면 말 줄임(생략표시)
+                        white-space: nowrap; //공백을 여러개 넣어도 1개만 보여줌, 텍스트 길어도 줄바꾸 없음
+                        overflow: hidden; //내용이 넘치면 자름
+                    }
+                }
+            }
+        }
+    }
+
+    //개쇼베스트상품
+    .main__best {
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            * {
+                padding: 3px 0;
+            }
+
+            .main__best--title {
+                font-size: $section__header--title--size;
+                font-weight: bold;
+            }
+            .main__best--subTitle {
+                font-size: $section__header--subTitle--size;
+                font-weight: 300;
+                color: #909091;
+            }
+        }
+
+        .main__best--category {
+            display: flex;
+            flex-direction: row;
+            margin: 20px 0; //상하 좌우 같게
+            li {
+                //전체보기, 모니터, 키보드 .... .etc
+                margin: 0 20px 0 0; // 위 0 오른쪽 20px 왼쪽 0 밑 0
+                padding: 5px 15px;
+                font-size: 1.3rem;
+                font-weight: 500;
+                cursor: pointer;
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+            }
+
+            .selected {
+                border: solid 2px #dadadd; //글자 위 테두리
+                border-radius: 30px;
+            }
+        }
+
+        .main__best--items {
+            //개쇼 추천 상품 리스트
+            // display: flex;
+            // flex-direction: row;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 4rem 2rem;
+            margin-bottom: 5rem;
+
+            // * {
+            //     margin-top: 5px;
+            // }
+            // section {
+            //     flex: 1;
+            //     padding: 5px;
+            > div {
+                h3 {
+                    font-size: 2rem;
+                    margin-top: 1.5rem;
+                }
+            }
+            > a:hover {
+                border: 1px solid #dcdcdc;
+            }
+            > a {
+                border: 1px solid transparent;
+                cursor: pointer;
+                color: black;
+                text-decoration: none;
+                .main__best--titleImg {
+                    position: relative;
+                    figcaption {
+                        display: flex;
+                        flex-direction: row;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        z-index: 1;
+
+                        * {
+                            padding: 3px 5px;
+                            margin: 10px 5px;
+                            border: solid 1px #707070;
+                            border-radius: 14px;
+                            background-color: #fff;
+                        }
+                    }
+                    width: 100%;
+                    height: 20rem;
+                    img {
+                        width: 100%;
+                        height: 20rem;
+                        object-fit: fill;
+                        // margin-top: 1.5rem;
+                    }
+                }
+                .main__best--titleImg {
+                    position: relative;
+                    margin-bottom: 1rem;
+                    figcaption {
+                        //추천 상품 사진과는 별개로 사진 위에 적용되는 요소들
+                        display: flex;
+                        flex-direction: row;
+                        position: absolute; //가장 가까운 부모에 배치, 없으면 컨테이너
+                        top: 0;
+                        right: 0;
+                        z-index: 1; //맨 위로 올라감
+
+                        * {
+                            padding: 5px;
+                            margin: 10px 5px;
+                            border: solid 1px #707070;
+                            border-radius: 14px;
+                        }
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+                .main__best--titleStr {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                }
+                .main__best--subTitle--wrapper {
+                    //상품 가격과 평점 배치
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-top: 0.5rem;
+
+                    .main__best--subTitle--price {
+                        flex: 1;
+                        font-size: 2rem;
+                        font-weight: bold;
+                    }
+
+                    .main__best--subTitle--point {
+                        //리뷰 평점
+                        font-size: 1.1rem;
+                        font-weight: 500;
+                        color: #7c7c7c;
+                    }
+                }
+                .main__best--subTitles {
+                    //구매전 기대평
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    margin-top: 0.5rem;
+                    b {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    // 오늘의 인기 키워드
+    .main__keywords {
+        display: flex;
+        flex-direction: column;
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #ffffff;
+
+            * {
+                padding: 5px 0;
+            }
+
+            h3 {
+                font-size: $section__header--title--size;
+            }
+
+            p {
+                font-size: $section__header--subTitle--size;
+            }
+        }
+
+        .keywords__body {
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap; //위에서 아래로, 여러개의 행으로 배치
+            justify-content: center; //수평 정렬
+            align-items: center; //수직정렬
+
+            .keywords__item {
+                width: 48%;
+                height: 19%;
+                display: flex;
+                flex-direction: row; //배치될 방향
+                align-items: center; //수직
+
+                border-bottom: 1px solid black;
+
+                //a태그 파란색 없애기
+                color: black;
+                text-decoration: none;
+
+                .keywords__item--rank {
+                    //순위 번호
+                    font-size: 2.2rem;
+                    font-weight: 100;
+                }
+
+                .keywords__item--title {
+                    padding: 0 1.5rem;
+                    font-size: 2.2rem;
+                    font-weight: bold;
+                    flex: 1;
+                }
+
+                .keywords__item--triangle {
+                    //증가
+                    font-size: 1.5rem;
+                }
+
+                .keywords__item--numericChange {
+                    //감소
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+// html {
+//     visibility: visible;
+//     opacity: 1;
+//     // display:none;
+// }
+// body {
+//     visibility: visible;
+//     // display:none;
+// }
+
+// .no-js {
+//     display:none;
+// }
+
+//1024px
+@include desktop {
+    body {
+        .main {
+            grid-column: 1 / span 6 !important;
+            // margin: 0 3% !important;
+            // grid-template-rows: repeat(5, 500px) !important;
+
+            .main__photo {
+                width: 100% !important;
+                height: 500px !important;
+                // width: 91% !important;
+            }
+            .main__review--frist {
+                height: 100% !important;
+            }
+            .main__review--frist:hover {
+                height: 100% !important;
+            }
+            .main__review--two {
+                height: 100% !important;
+                // margin-left: 1px;
+            }
+            .main__review--two:hover {
+                height: 100% !important;
+                // margin-left: 1px;
+            }
+            .main__review--two .caption {
+                // width: 400px;
+                // height: 266px;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                overflow: hidden;
+                top: 0;
+                right: 0 !important;
+                margin-left: 4px !important;
+            }
+            .main__review--frist--one {
+                padding: 0 40px 0 120px !important; //상우하좌
+            }
+            //개쇼추천상품
+            .main__recommend {
+                margin-top: 10rem !important;
+                margin-bottom: 20rem !important;
+            }
+
+            //워크스페이즈
+            .main__workspace {
+                margin-top: 15rem !important;
+                grid-template-columns: repeat(1, 1fr) !important;
+                height: 100px;
+            }
+
+            .main__workspace--item--wrapper {
+                // margin-top: 20rem !important;
+                // margin-bottom: 10rem ;
+            }
+
+            //오늘의 워크스페이스 사진 크기는 칼럼과 로우 숫자 별로 다 다르다
+            .main__workspace--item:nth-child(2) {
+                grid-column: 1 / 4;
+                grid-row: 2 / 26 !important;
+            }
+            .main__workspace--item:nth-child(3) {
+                grid-column: 4 / 6;
+                grid-row: 2 / 9 !important;
+            }
+            .main__workspace--item:nth-child(4) {
+                grid-column: 4 / 6;
+                grid-row: 10 / 26 !important;
+            }
+
+            //개쇼 베스트상품
+            .main__best {
+                // width: 85% !important;
+                margin-top: 50rem !important;
+            }
+            .main__keywords {
+                margin-top: 60rem !important;
+            }
+
+            .keywords__body {
+                height: 30rem !important;
+            }
+            //키워드 내부 아이템
+            .keywords__item {
+                width: 50% !important;
+
+                .keywords__item--rank {
+                    font-size: 1.2rem !important;
+                }
+
+                .keywords__item--title {
+                    font-size: 1.2rem !important;
+                }
+            }
+        }
+
+        .footer {
+            margin-top: 90rem !important;
+        }
+
+        // #mainProduct {
+        //     grid-template-columns: repeat(1, 1fr)  !important;
+        //     // width: 0 !important;
+        // }
+
+        // #itemWrap {
+        //     grid-template-columns: repeat(1, 1fr)  !important;
+        // }
+        // #itemBestWrap {
+        //     grid-template-columns: repeat(1, 1fr)  !important;
+        // }
+        // //오늘의워크스페이스
+
+        // //인기워크스페이스
+        // #popularWrap {
+        //     grid-template-columns: repeat(1, 1fr)  !important;
+        // }
+    }
+}
+
+//420px
+@include mobile {
+    // html {
+    //     font-size: 9px;
+    // }
+    body {
+        //알람창
+        .nav__item--users--alramContent {
+            z-index: 10 !important;
+            width: 25rem !important;
+            height: 20rem !important;
+            > h3 {
+                font-size: 1.2rem;
+            }
+        }
+        .main {
+            grid-column: 1 / span 6 !important;
+            // margin: 0 3% !important;
+            grid-template-rows: repeat(5, 500px) !important;
+            // z-index: -1 !important; //알람 맨앞으로 하기위해서
+
+            .main__review--frist:hover{
+                display: none !important;
+            }
+            .main__review--two:hover{
+                display: none !important;
+            }
+            .main__photo {
+                height: 100px !important;
+                margin-bottom: 0;
+                grid-gap: 0 0;
+
+                //타이틀 .main__photo--wrapper {
+
+                figcaption {
+                    * {
+                        padding: 1px 0 !important;
+                    }
+
+                    .main__photo--titleStr {
+                        //사진위에 올라가는 타이틀
+                        font-size: 1.4rem !important;
+                        margin-left: 20px;
+                    }
+
+                    .main__photo--wrapper--profile {
+                        margin-left: 10px !important;
+                    }
+                }
+            }
+
+            .main__recommend {
+                margin-top: 35rem;
+                margin-bottom: 20rem;
+
+                .main__recommend--category {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap !important;
+                    margin: 20px 0; //상하 좌우 같게
+                    li {
+                        //전체보기, 모니터, 키보드 .... .etc
+                        margin: 0 10px 10px 0 !important; // 위 0 오른쪽 20px 왼쪽 0 밑 0
+                        padding: 5px 10px;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+
+                        cursor: pointer;
+                    }
+
+                    a {
+                        color: black;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            //워크스페이스
+            .main__workspace {
+                margin-top: 80rem !important;
+            }
+
+            .main__workspace--item--wrapper {
+                grid-template-columns: repeat(5, 1fr) !important;
+            }
+
+            .main__workspace--item:nth-child(2) {
+                grid-column: 1 / 6 !important;
+                width: 100% !important;
+                grid-row: 2 / 15 !important;
+            }
+
+            .main__workspace--item:nth-child(3) {
+                grid-column: 1 / 4 !important;
+                grid-row: 15 / 28 !important;
+                // margin-right: 2rem;
+            }
+
+            .main__workspace--item:nth-child(4) {
+                grid-column: 4 / 6 !important;
+                grid-row: 15 / 28 !important;
+            }
+
+            //첫번째 큰사진
+            .main__workspace--item--big:nth-child(2) {
+                grid-column: 1 / 6; //가 x 세 사진 크기
+                grid-row: 7 / 8;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                color: #ffffff;
+                margin: 0 10px; //상하 좌우 같음 10px 띄워주기
+                margin-top: 6rem !important; //높이조절
+                h3 {
+                    margin-top: 1rem !important; //높이조절
+                    flex: 1; //flex-grow 1 같음, 넓이 증가 비율이 1
+                    font-size: 1.2rem !important;
+                    //첫번째타이틀제목
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                img {
+                    width: 1.6rem !important;
+                    height: 1.6rem !important;
+                    border-radius: 50%; //원형
+                    margin-right: 5px;
+                    margin-top: 1rem !important; //높이조절
+                }
+                p {
+                    margin-top: 1rem !important; //높이조절
+                }
+            }
+            .main__workspace--item--big:nth-child(3) {
+                grid-column: 1 / 6; //사진 크기
+                grid-row: 8 / 9;
+
+                margin: 0 10px; // 상하 좌우 비율 같게 10px 띄워주기
+
+                display: flex;
+                flex-direction: row;
+
+                color: #ffffff;
+                font-size: 1.2rem;
+
+                p {
+                    //공유,댓글,조회수
+                    margin-right: 10px;
+                }
+            }
+            //작은 사진
+            .main__workspace--item--small {
+                grid-column: 1 / 6;
+                grid-row: 7 / 9;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                max-width: 100%;
+                color: #ffffff;
+                * {
+                    margin: 0 5px;
+                }
+                h3 {
+                    //두번째 타이틀
+                    //제목
+                    position: relative;
+                    flex: 1; //flex-grow 1 같음, 넓이 증가 비율이 1
+                    font-size: 1.2rem;
+                    width: 70%;
+                    text-overflow: ellipsis; //글자 넓이가 70% 넘어서면 말 줄임(생략표시)
+                    white-space: nowrap; //공백을 여러개 넣어도 1개만 보여줌, 텍스트 길어도 줄바꾸 없음
+                    overflow: hidden; //내용이 넘치면 자름
+                }
+                img {
+                    //프로필
+                    width: 1.6rem !important;
+                    height: 1.6rem !important;
+                    border-radius: 50%;
+                }
+                p {
+                    //닉
+                    width: 20%;
+                    text-overflow: ellipsis; //글자 넓이가 70% 넘어서면 말 줄임(생략표시)
+                    white-space: nowrap; //공백을 여러개 넣어도 1개만 보여줌, 텍스트 길어도 줄바꾸 없음
+                    overflow: hidden; //내용이 넘치면 자름
+                }
+            }
+
+            .main__best {
+                margin-top: 100rem !important;
+
+                .main__best--category {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap !important;
+                    margin: 20px 0; //상하 좌우 같게
+                    li {
+                        //전체보기, 모니터, 키보드 .... .etc
+                        margin: 0 10px 10px 0 !important; // 위 0 오른쪽 20px 왼쪽 0 밑 0
+                        padding: 5px 10px;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+
+                        cursor: pointer;
+                    }
+
+                    a {
+                        color: black;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .main__keywords {
+                margin-top: 140rem !important;
+            }
+
+            .keywords__body {
+                height: 30rem !important;
+            }
+            //키워드 내부 아이템
+            .keywords__item {
+                width: 70% !important;
+
+                .keywords__item--rank {
+                    font-size: 1rem !important;
+                }
+
+                .keywords__item--title {
+                    font-size: 1rem !important;
+                }
+            }
+        }
+    }
+    #mainRecommend {
+        margin-top: 25rem !important;
+    }
+    #todayWorks {
+        margin-top: 105rem !important;
+    }
+    #mainBest {
+        margin-top: 150rem !important;
+    }
+    #mainKeywords {
+        margin-top: 230rem !important;
+    }
+    #footer {
+        margin-top: 245rem !important;
+    }
+
+    #mainProduct {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #itemWrap {
+        grid-template-columns: repeat(1, 1fr);
+        // margin-top: 30rem;
+    }
+    #itemBestWrap {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    //오늘의워크스페이스
+
+    //인기워크스페이스
+    #popularWrap {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    //     #todayKeyword {
+    //         grid-template-columns: repeat(1, 1fr);
+    //     }
+}
+
+//320px
+@include half-tablet {
+    // html{
+    //     font-size :10px;
+    // }
+
+    body {
+        //알람창
+        .nav__item--users--alramContent {
+            z-index: 10 !important;
+            width: 21rem !important;
+            height: 20rem !important;
+            > h3 {
+                font-size: 1.2rem;
+            }
+        }
+        .main {
+            // grid-column: 1 / span 6 !important;
+            // z-index: -1 !important; //알람 맨앞으로 하기위해서
+
+
+            .main__review--frist:hover{
+                display: none !important;
+            }
+            .main__review--two:hover{
+                display: none !important;
+            }
+            
+            .main__photo {
+                height: 100px !important;
+                margin-bottom: 0;
+                grid-gap: 0 0;
+                // z-index: -1 !important;
+                .main__photo--wrapper {
+                    //타이틀
+
+                    figcaption {
+                        * {
+                            padding: 1px 0 !important;
+                        }
+
+                        .main__photo--titleStr {
+                            //사진위에 올라가는 타이틀
+                            font-size: 1.4rem !important;
+                            margin-left: 20px;
+                        }
+
+                        .main__photo--wrapper--profile {
+                            margin-left: 10px !important;
+                        }
+                    }
+                }
+            }
+
+            //첫번째댓글
+            .main__review--frist {
+                display: hidden;
+                width: 88% !important;
+                height: 98% !important;
+                font-size: 1rem !important;
+            }
+
+            .main__review--frist:hover {
+                display: hidden;
+                width: 88% !important;
+                height: 98% !important;
+                font-size: 1rem !important;
+                color: transparent;
+            }
+            .main__review--two {
+                display: none !important;
+                top: 0 !important;
+                bottom: 10 !important;
+                z-index: 1 !important;
+            }
+
+            .main__review--two:hover {
+                display: none !important;
+                top: 0 !important;
+                bottom: 10 !important;
+                z-index: 1 !important;
+                color: transparent !important;
+            }
+            .main__recommend {
+                margin-top: 20rem;
+                margin-bottom: 20rem;
+
+                //개쇼추천상품 타이틀
+                header {
+                    // width :78% !important;
+                    font-size: 1.5rem !important;
+                }
+
+                .main__recommend--category {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap !important;
+                    margin: 20px 0; //상하 좌우 같게
+                    li {
+                        //전체보기, 모니터, 키보드 .... .etc
+                        margin: 0 10px 10px 0 !important; // 위 0 오른쪽 20px 왼쪽 0 밑 0
+                        padding: 5px 10px;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+
+                        cursor: pointer;
+                    }
+
+                    a {
+                        color: black;
+                        text-decoration: none;
+                    }
+                }
+                .main__recommend--items {
+                    //개쇼 추천 상품 리스트
+                    // display: flex;
+                    // flex-direction: row;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 4rem 2rem;
+                    margin-bottom: 5rem;
+
+                    // * {
+                    //     margin-top: 5px;
+                    // }
+                    // section {
+                    //     flex: 1;
+                    //     padding: 5px;
+                    > div {
+                        h3 {
+                            font-size: 2rem;
+                            margin-top: 1.5rem;
+                        }
+                    }
+                    > a:hover {
+                        border: 1px solid #dcdcdc;
+                    }
+                    > a {
+                        border: 1px solid transparent;
+                        cursor: pointer;
+                        color: black;
+                        text-decoration: none;
+                        // width :78% !important;
+                        .main__recommend--titleImg {
+                            position: relative;
+                            figcaption {
+                                display: flex;
+                                flex-direction: row;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                z-index: 1;
+
+                                * {
+                                    padding: 3px 5px;
+                                    margin: 10px 5px;
+                                    border: solid 1px #707070;
+                                    border-radius: 14px;
+                                    background-color: #fff;
+                                }
+                            }
+                            width: 100%;
+                            height: 20rem;
+                            img {
+                                width: 100%;
+                                height: 20rem;
+                                object-fit: fill;
+                                // margin-top: 1.5rem;
+                            }
+                        }
+                        .main__recommend--titleImg {
+                            position: relative;
+                            margin-bottom: 1rem;
+                            figcaption {
+                                //추천 상품 사진과는 별개로 사진 위에 적용되는 요소들
+                                display: flex;
+                                flex-direction: row;
+                                position: absolute; //가장 가까운 부모에 배치, 없으면 컨테이너
+                                top: 0;
+                                right: 0;
+                                z-index: 1; //맨 위로 올라감
+
+                                * {
+                                    padding: 5px;
+                                    margin: 10px 5px;
+                                    border: solid 1px #707070;
+                                    border-radius: 14px;
+                                }
+                            }
+                            img {
+                                width: 100%;
+                                height: 20rem;
+                                object-fit: fill;
+                            }
+                        }
+                        .main__recommend--titleStr {
+                            font-size: 1.5rem;
+                            font-weight: 500;
+                            margin-bottom: 1rem;
+                        }
+                        .main__recommend--subTitle--wrapper {
+                            //상품 가격과 평점 배치
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            margin-top: 0.5rem;
+
+                            .main__recommend--subTitle--price {
+                                flex: 1;
+                                font-size: 2rem;
+                                font-weight: bold;
+                            }
+
+                            .main__recommend--subTitle--point {
+                                //리뷰 평점
+                                font-size: 1.1rem;
+                                font-weight: 500;
+                                color: #7c7c7c;
+                            }
+                        }
+                        .main__recoomend--subTitles {
+                            //구매전 기대평
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                            margin-top: 0.5rem;
+                            b {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+
+            //워크스페이스
+            .main__workspace {
+                margin-top: 80rem !important;
+            }
+
+            .main__workspace--item--wrapper {
+                grid-template-columns: repeat(5, 1fr) !important;
+                // width: 78% !important;
+            }
+            //오늘의워크스페이스 타이틀
+            .main__workspace--item:nth-child(1) {
+                font-size: 1.5rem !important;
+            }
+
+            .main__workspace--item:nth-child(2) {
+                grid-column: 1 / 6 !important;
+                //  width: 77% !important;
+                grid-row: 2 / 15 !important;
+            }
+
+            .main__workspace--item:nth-child(3) {
+                grid-column: 1 / 4 !important;
+                grid-row: 15 / 28 !important;
+                // margin-right: 2rem;
+            }
+
+            .main__workspace--item:nth-child(4) {
+                grid-column: 4 / 6 !important;
+                grid-row: 15 / 28 !important;
+            }
+
+            //첫번째 큰사진
+            .main__workspace--item--big:nth-child(2) {
+                grid-column: 1 / 6; //가 x 세 사진 크기
+                grid-row: 7 / 8;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                color: #ffffff;
+                margin: 0 10px; //상하 좌우 같음 10px 띄워주기
+                margin-top: 6rem !important; //높이조절
+                h3 {
+                    margin-top: 1rem !important; //높이조절
+                    flex: 1; //flex-grow 1 같음, 넓이 증가 비율이 1
+                    font-size: 1.1rem !important;
+                    //첫번째타이틀제목
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                img {
+                    width: 1.6rem !important;
+                    height: 1.6rem !important;
+                    border-radius: 50%; //원형
+                    margin-right: 5px;
+                    margin-top: 1rem !important; //높이조절
+                }
+                p {
+                    margin-top: 1rem !important; //높이조절
+                }
+            }
+            .main__workspace--item--big:nth-child(3) {
+                grid-column: 1 / 6; //사진 크기
+                grid-row: 8 / 9;
+
+                margin: 0 10px; // 상하 좌우 비율 같게 10px 띄워주기
+
+                display: flex;
+                flex-direction: row;
+
+                color: #ffffff;
+                font-size: 1.2rem;
+
+                p {
+                    //공유,댓글,조회수
+                    margin-right: 10px;
+                }
+            }
+            //작은 사진
+            .main__workspace--item--small {
+                grid-column: 1 / 6;
+                grid-row: 7 / 9;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                max-width: 100%;
+                color: #ffffff;
+                * {
+                    margin: 0 5px;
+                }
+                h3 {
+                    //두번째 타이틀
+                    //제목
+                    position: relative;
+                    flex: 1; //flex-grow 1 같음, 넓이 증가 비율이 1
+                    font-size: 1.2rem;
+                    width: 70%;
+                    text-overflow: ellipsis; //글자 넓이가 70% 넘어서면 말 줄임(생략표시)
+                    white-space: nowrap; //공백을 여러개 넣어도 1개만 보여줌, 텍스트 길어도 줄바꾸 없음
+                    overflow: hidden; //내용이 넘치면 자름
+                }
+                img {
+                    //프로필
+                    width: 1.6rem !important;
+                    height: 1.6rem !important;
+                    border-radius: 50%;
+                }
+                p {
+                    //닉
+                    width: 20%;
+                    text-overflow: ellipsis; //글자 넓이가 70% 넘어서면 말 줄임(생략표시)
+                    white-space: nowrap; //공백을 여러개 넣어도 1개만 보여줌, 텍스트 길어도 줄바꾸 없음
+                    overflow: hidden; //내용이 넘치면 자름
+                }
+            }
+
+            .main__best {
+                margin-top: 100rem !important;
+
+                //개쇼베스트상품 타이틀
+                header {
+                    // width :78% !important;
+                    font-size: 1.5rem !important;
+                }
+            }
+
+            .main__best--category {
+                display: flex;
+                flex-direction: row;
+                margin: 20px 0; //상하 좌우 같게
+                // width :78% !important;
+                li {
+                    //전체보기, 모니터, 키보드 .... .etc
+                    margin: 0 10px 10px 0 !important; // 위 0 오른쪽 20px 왼쪽 0 밑 0
+                    padding: 5px 10px;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+
+                    cursor: pointer;
+                }
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+
+                .selected {
+                    border: solid 2px #dadadd; //글자 위 테두리
+                    border-radius: 30px;
+                }
+            }
+
+            .main__best--items {
+                //개쇼 추천 상품 리스트
+                // display: flex;
+                // flex-direction: row;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 4rem 2rem;
+                margin-bottom: 5rem;
+
+                // * {
+                //     margin-top: 5px;
+                // }
+                // section {
+                //     flex: 1;
+                //     padding: 5px;
+                > div {
+                    h3 {
+                        font-size: 2rem;
+                        margin-top: 1.5rem;
+                    }
+                }
+                > a:hover {
+                    border: 1px solid #dcdcdc;
+                }
+                > a {
+                    border: 1px solid transparent;
+                    cursor: pointer;
+                    color: black;
+                    text-decoration: none;
+                    //너비
+                    // width :78% !important;
+                    .main__best--titleImg {
+                        position: relative;
+                        figcaption {
+                            display: flex;
+                            flex-direction: row;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            z-index: 1;
+
+                            * {
+                                padding: 3px 5px;
+                                margin: 10px 5px;
+                                border: solid 1px #707070;
+                                border-radius: 14px;
+                                background-color: #fff;
+                            }
+                        }
+                        width: 100%;
+                        height: 20rem;
+                        img {
+                            width: 100%;
+                            height: 20rem;
+                            object-fit: fill;
+                            // margin-top: 1.5rem;
+                        }
+                    }
+                    .main__best--titleImg {
+                        position: relative;
+                        margin-bottom: 1rem;
+                        figcaption {
+                            //추천 상품 사진과는 별개로 사진 위에 적용되는 요소들
+                            display: flex;
+                            flex-direction: row;
+                            position: absolute; //가장 가까운 부모에 배치, 없으면 컨테이너
+                            top: 0;
+                            right: 0;
+                            z-index: 1; //맨 위로 올라감
+
+                            * {
+                                padding: 5px;
+                                margin: 10px 5px;
+                                border: solid 1px #707070;
+                                border-radius: 14px;
+                            }
+                        }
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .main__best--titleStr {
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                        margin-bottom: 1rem;
+                    }
+                    .main__best--subTitle--wrapper {
+                        //상품 가격과 평점 배치
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin-top: 0.5rem;
+
+                        .main__best--subTitle--price {
+                            flex: 1;
+                            font-size: 2rem;
+                            font-weight: bold;
+                        }
+
+                        .main__best--subTitle--point {
+                            //리뷰 평점
+                            font-size: 1.1rem;
+                            font-weight: 500;
+                            color: #7c7c7c;
+                        }
+                    }
+                    .main__best--subTitles {
+                        //구매전 기대평
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        margin-top: 0.5rem;
+                        b {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            .main__keywords {
+                margin-top: 180rem !important;
+
+                //오늘의인기키워드 타이틀
+                header {
+                    // width :78% !important;
+                    font-size: 1.5rem !important;
+                }
+            }
+
+            .keywords__body {
+                height: 30rem !important;
+                //    width :78% !important;
+            }
+            //키워드 내부 아이템
+            .keywords__item {
+                // width :80% !important;
+
+                .keywords__item--rank {
+                    font-size: 0.8rem !important;
+                }
+
+                .keywords__item--title {
+                    font-size: 0.8rem !important;
+                }
+            }
+        }
+        #mainProduct {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+
+        #itemWrap {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+        #itemBestWrap {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+        //오늘의워크스페이스
+
+        //인기워크스페이스
+        #popularWrap {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+    }
+}
+
+//768px
+@include tablet {
+    body {
+        .main {
+            grid-column: 1 / span 6 !important;
+            // margin: 0 3% !important;
+
+            .main__review--frist:hover{
+                display: none !important;
+            }
+            .main__review--two:hover{
+                display: none !important;
+            }
+            
+            .main__photo {
+                width: 100% !important;
+                height: 300px !important;
+                // width: 91% !important;
+
+                .main__photo--wrapper {
+                    //타이틀
+
+                    figcaption {
+                        * {
+                            padding: 1px 0 !important;
+                        }
+
+                        .main__photo--titleStr {
+                            //사진위에 올라가는 타이틀
+                            font-size: 1.4rem !important;
+                            margin-left: 20px;
+                        }
+
+                        .main__photo--wrapper--profile {
+                            margin-left: 10px !important;
+                        }
+                    }
+                }
+            }
+
+            .main__recommend {
+                // width: 85% !important;
+                // width: 85% !important;
+                margin-top: 1rem !important;
+                margin-bottom: 20rem !important;
+            }
+
+            .main__workspace {
+                // margin-top: 80rem !important;
+                grid-template-columns: repeat(1, 1fr) !important;
+                height: 100px;
+
+                .main__workspace:nth-child(1) {
+                    grid-column: 1 / 1;
+                }
+                .main__workspace:nth-child(2) {
+                    grid-column: 1 / 1;
+                }
+
+                .main__workspace--item--wrapper {
+                    margin: 3rem 0;
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-rows: 1fr 2fr 2fr 0.5fr; //비율 1 : 2 : 2 : 0.5
+                    gap: 10px;
+                    cursor: pointer;
+
+                    .main__workspace--item:nth-child(1) {
+                        grid-column: 1 / 6; //1열부터 6열까지
+                        grid-row: 1 / 2; //1행부터 2행까지
+                        display: flex;
+                        align-items: flex-end; //아래쪽
+                        margin: auto 0;
+
+                        font-size: $section__header--title--size;
+                        p {
+                            margin-left: 1rem;
+                            font-size: $section__header--subTitle--size;
+                            color: #909091;
+                        }
+                    }
+                    //오늘의 워크스페이스 사진 크기는 칼럼과 로우 숫자 별로 다 다르다
+                    .main__workspace--item:nth-child(2) {
+                        grid-column: 1 / 4;
+                        grid-row: 2 / 20;
+                    }
+                    .main__workspace--item:nth-child(3) {
+                        grid-column: 4 / 6;
+                        grid-row: 2 / 6;
+                    }
+                    .main__workspace--item:nth-child(4) {
+                        grid-column: 4 / 6;
+                        grid-row: 7 / 20;
+                    }
+                }
+
+                //첫번째 큰사진
+                .main__workspace--item--big:nth-child(2) {
+                    grid-column: 1 / 6; //가 x 세 사진 크기
+                    grid-row: 7 / 8;
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    color: #ffffff;
+                    margin: 0 10px; //상하 좌우 같음 10px 띄워주기
+                    margin-top: 6rem !important; //높이조절
+                    h3 {
+                        margin-top: 1rem !important; //높이조절
+                        flex: 1; //flex-grow 1 같음, 넓이 증가 비율이 1
+                        font-size: 1.2rem !important;
+                        //첫번째타이틀제목
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    img {
+                        width: 1.7rem !important;
+                        height: 1.7rem !important;
+                        border-radius: 50%; //원형
+                        margin-right: 5px;
+                        margin-top: 1rem !important; //높이조절
+                    }
+                    p {
+                        margin-top: 1rem !important; //높이조절
+                    }
+                }
+                .main__workspace--item--big:nth-child(3) {
+                    grid-column: 1 / 6; //사진 크기
+                    grid-row: 8 / 9;
+
+                    margin: 0 10px; // 상하 좌우 비율 같게 10px 띄워주기
+
+                    display: flex;
+                    flex-direction: row;
+
+                    color: #ffffff;
+                    font-size: 1.2rem;
+
+                    p {
+                        //공유,댓글,조회수
+                        margin-right: 10px;
+                    }
+                }
+                //작은 사진
+                .main__workspace--item--small {
+                    grid-column: 1 / 6;
+                    grid-row: 7 / 9;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    max-width: 100%;
+                    color: #ffffff;
+                    * {
+                        margin: 0 5px;
+                    }
+                    h3 {
+                        //두번째 타이틀
+                        //제목
+                        position: relative;
+                        flex: 1; //flex-grow 1 같음, 넓이 증가 비율이 1
+                        font-size: 1.4rem;
+                        width: 70%;
+                        text-overflow: ellipsis; //글자 넓이가 70% 넘어서면 말 줄임(생략표시)
+                        white-space: nowrap; //공백을 여러개 넣어도 1개만 보여줌, 텍스트 길어도 줄바꾸 없음
+                        overflow: hidden; //내용이 넘치면 자름
+                    }
+                    img {
+                        //프로필
+                        width: 1.7rem !important;
+                        height: 1.7rem !important;
+                        border-radius: 50%;
+                    }
+                    p {
+                        //닉
+                        width: 20%;
+                        text-overflow: ellipsis; //글자 넓이가 70% 넘어서면 말 줄임(생략표시)
+                        white-space: nowrap; //공백을 여러개 넣어도 1개만 보여줌, 텍스트 길어도 줄바꾸 없음
+                        overflow: hidden; //내용이 넘치면 자름
+                    }
+                }
+            }
+
+            .main__best {
+                // width: 85% !important;
+                margin-top: 30rem !important;
+            }
+            .main__keywords {
+                margin-top: 40rem !important;
+            }
+            .keywords__body {
+                height: 30rem !important;
+            }
+            //키워드 내부 아이템
+            .keywords__item {
+                width: 45% !important;
+
+                .keywords__item--rank {
+                    font-size: 1.2rem !important;
+                }
+
+                .keywords__item--title {
+                    font-size: 1.2rem !important;
+                }
+            }
+        }
+
+        .footer {
+            margin-top: 45rem !important;
+        }
+    }
+}
+
+//835px
+@include bigTablet {
+    body {
+        .main {
+            grid-column: 1 / span 6 !important;
+            // margin: 0 3% !important;
+
+            .main__review--frist:hover{
+                display: none !important;
+            }
+            .main__review--two:hover{
+                display: none !important;
+            }
+
+            .main__photo {
+                width: 100% !important;
+                height: 300px !important;
+                // width: 91% !important;
+                .main__photo--wrapper {
+                    //타이틀
+
+                    figcaption {
+                        * {
+                            padding: 1px 0 !important;
+                        }
+
+                        .main__photo--titleStr {
+                            //사진위에 올라가는 타이틀
+                            font-size: 1.4rem !important;
+                            margin-left: 20px;
+                        }
+
+                        .main__photo--wrapper--profile {
+                            margin-left: 10px !important;
+                        }
+                    }
+                }
+            }
+
+            .main__recommend {
+                // width: 85% !important;
+                // width: 85% !important;
+                margin-top: 1rem !important;
+                // margin-bottom:20rem !important;
+            }
+
+            .main__workspace {
+                // margin-top: 80rem !important;
+                grid-template-columns: repeat(1, 1fr) !important;
+                height: 100px;
+
+                .main__workspace:nth-child(1) {
+                    grid-column: 1 / 1;
+                }
+                .main__workspace:nth-child(2) {
+                    grid-column: 1 / 1;
+                }
+
+                .main__workspace--item--wrapper {
+                    margin: 3rem 0;
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-rows: 1fr 2fr 2fr 0.5fr; //비율 1 : 2 : 2 : 0.5
+                    gap: 10px;
+                    cursor: pointer;
+
+                    .main__workspace--item:nth-child(1) {
+                        grid-column: 1 / 6; //1열부터 6열까지
+                        grid-row: 1 / 2; //1행부터 2행까지
+                        display: flex;
+                        align-items: flex-end; //아래쪽
+                        margin: auto 0;
+
+                        font-size: $section__header--title--size;
+                        p {
+                            margin-left: 1rem;
+                            font-size: $section__header--subTitle--size;
+                            color: #909091;
+                        }
+                    }
+                    //오늘의 워크스페이스 사진 크기는 칼럼과 로우 숫자 별로 다 다르다
+                    .main__workspace--item:nth-child(2) {
+                        grid-column: 1 / 4;
+                        grid-row: 2 / 20;
+                    }
+                    .main__workspace--item:nth-child(3) {
+                        grid-column: 4 / 6;
+                        grid-row: 2 / 6;
+                    }
+                    .main__workspace--item:nth-child(4) {
+                        grid-column: 4 / 6;
+                        grid-row: 7 / 20;
+                    }
+                }
+            }
+
+            .main__best {
+                // width: 85% !important;
+                margin-top: 50rem !important;
+            }
+            .main__keywords {
+                margin-top: 55rem !important;
+            }
+            .keywords__body {
+                height: 30rem !important;
+            }
+            //키워드 내부 아이템
+            .keywords__item {
+                width: 45% !important;
+
+                .keywords__item--rank {
+                    font-size: 1.1rem !important;
+                }
+
+                .keywords__item--title {
+                    font-size: 1.1rem !important;
+                }
+            }
+        }
+
+        .footer {
+            margin-top: 60rem !important;
+        }
+    }
+}
+
+
+//1440px
+@include HiDP {
+    body {
+        .main {
+            grid-column: 1 / span 6 !important;
+            margin: 0 3% !important;
+
+            .main__review--frist:hover{
+                display: none !important;
+            }
+            .main__review--two:hover{
+                display: none !important;
+            }
+
+           
+          
+            // .main__keywords {
+            //     margin-top: 55rem !important;
+            // }
+            .keywords__body {
+                height: 30rem !important;
+            }
+            //키워드 내부 아이템
+            .keywords__item {
+                width: 45% !important;
+
+                .keywords__item--rank {
+                    font-size: 1.1rem !important;
+                }
+
+                .keywords__item--title {
+                    font-size: 1.1rem !important;
+                }
+            }
+        }
+
+        .sidebar__recentItem--wrapper{
+            display: none !important;
+        }
+        .footer {
+            height: 20rem !important;
+        }
+      
+    }
+}
+
+

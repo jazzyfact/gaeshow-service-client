@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="./css/ide.css">
+    <script>
+        window.GitpleConfig = {
+            appCode: '6EqaYP5HzUQ7wAiVDNMqvuQcQT2tf3',
+            userLnag: 'ko'
+        };
+        !function () { function e() { function e() { var e = t.contentDocument, a = e.createElement("script"); a.type = "text/javascript", a.async = !0, a.src = window[n] && window[n].url ? window[n].url + "/inapp-web/gitple-loader.js" : "https://app.gitple.io/inapp-web/gitple-loader.js", a.charset = "UTF-8", e.head && e.head.appendChild(a) } var t = document.getElementById(a); t || ((t = document.createElement("iframe")).id = a, t.style.display = "none", t.style.width = "0", t.style.height = "0", t.addEventListener ? t.addEventListener("load", e, !1) : t.attachEvent ? t.attachEvent("onload", e) : t.onload = e, document.body.appendChild(t)) } var t = window, n = "GitpleConfig", a = "gitple-loader-frame"; if (!window.Gitple) { document; var i = function () { i.ex && i.ex(arguments) }; i.q = [], i.ex = function (e) { i.processApi ? i.processApi.apply(void 0, e) : i.q && i.q.push(e) }, window.Gitple = i, t.attachEvent ? t.attachEvent("onload", e) : t.addEventListener("load", e, !1) } }();
+    </script>
+</head>
+
+<body>
+    <header class="body__item header" id="headerBanner"></header>
+    <nav class="body__item nav" id="headerNav"></nav>
+    <main class="body__item main">
+        <header class="header">
+            <h3 id="cateTitle">IDE, 언어 추천</h3>
+            <p id="cateExplain">다른 사람들이 많이 쓰는 IDE와 언어가 궁금하세요?</p>
+        </header>
+        <section class="category">
+            <button class="focus" id="lang">언어</button>
+            <button id="ide">IDE</button>
+        </section>
+        <section class="list">
+            <h3 id="subTitle">언어 리스트</h3>
+            <span>
+                <!-- <figure>
+                    <img src="./res/img/icon_search.svg" />
+                    <figcaption>
+                        <input type="text" value="" placeholder="검색어를 입력해주세요." />
+                    </figcaption>
+                </figure>
+                <button>검색하기</button> -->
+            </span>
+            <ul class="item" id="itemList">
+                <li class="item__header">
+                    <p class="item__header--idx">#</p>
+                    <p class="item__header--title">ide 이름</p>
+                </li>
+                <!-- <li class="item__body">
+                    <p class="item__body--idx">1</p>
+                    <p class="item__body--title">VSCode</p>
+                    <a>바로가기</a>
+                </li> -->
+            </ul>
+        </section>
+        <div class="body__item--paging">
+        </div>
+    </main>
+    <footer class="body__item footer" id="footer"></footer>
+</body>
+
+<script type="module" src="./js/on.load.js"></script>
+
+
+</html>

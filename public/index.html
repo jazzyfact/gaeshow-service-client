@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <!--  <link rel="stylesheet" type="text/css" href="./css/index.css?after"> -->
+    <script>
+        window.GitpleConfig = {
+            appCode: '6EqaYP5HzUQ7wAiVDNMqvuQcQT2tf3',
+            userLnag: 'ko'
+        };
+        !function () { function e() { function e() { var e = t.contentDocument, a = e.createElement("script"); a.type = "text/javascript", a.async = !0, a.src = window[n] && window[n].url ? window[n].url + "/inapp-web/gitple-loader.js" : "https://app.gitple.io/inapp-web/gitple-loader.js", a.charset = "UTF-8", e.head && e.head.appendChild(a) } var t = document.getElementById(a); t || ((t = document.createElement("iframe")).id = a, t.style.display = "none", t.style.width = "0", t.style.height = "0", t.addEventListener ? t.addEventListener("load", e, !1) : t.attachEvent ? t.attachEvent("onload", e) : t.onload = e, document.body.appendChild(t)) } var t = window, n = "GitpleConfig", a = "gitple-loader-frame"; if (!window.Gitple) { document; var i = function () { i.ex && i.ex(arguments) }; i.q = [], i.ex = function (e) { i.processApi ? i.processApi.apply(void 0, e) : i.q && i.q.push(e) }, window.Gitple = i, t.attachEvent ? t.attachEvent("onload", e) : t.addEventListener("load", e, !1) } }();
+    </script>
+</head>
+
+<body>
+    <header class="body__item header" id="headerBanner"></header>
+    <nav class="body__item nav" id="headerNav">
+    </nav>
+    <!-- <article class="body__item sidebar__left">
+        <div class="article__item"></div>
+    </article> -->
+    <main class="body__item main">
+        <!-- 최상단 상품 보여주는 곳 -->
+        <section class="main__photo" id="mainProduct">
+            <!-- 첫번째 상품 리뷰  -->
+            <a class="main__review--frist  hover_effect" id="aLink">
+                <div class="content_bg">
+                    <!--배경 이미지-->
+                  </div>
+                  <div class="caption">
+                    <div class="caption_title" id="mainReviewOneTitle">상품리뷰</div>
+                <!-- <div class="main__review--frist--title" id="productCommentTitle">Review</div> -->
+                <div class="main__review--frist--one" id="firstProductComment"></div>
+                <div  class="main__review--frist--one" id="firstProductTwoReview"></div>
+                <div  class="main__review--frist--one" id="firstProductThreeReview"></div>
+                </div>
+            </a>
+            <!-- 두번째 상품 리뷰  -->
+            <a class="main__review--two  hover_effect" id="bLink">
+                <div class="content_bg">
+                    <!--배경 이미지-->
+                  </div>
+                  <div class="caption">
+                    <div class="caption_title" id="mainReviewTwoTitle">상품리뷰</div>
+                <div  class="main__review--frist--one" id="twoComment"></div>
+                <div  class="main__review--frist--one" id="twoCommentTwoReview"></div>
+                <div  class="main__review--frist--one" id="twoCommentThreeReview"></div>
+                </div>
+            </a>
+        </section>
+        <!-- 개쇼 추천 상품 -->
+        <section class="main__recommend" id="mainRecommend">
+            <header>
+                <h3 class="main__recommend--title">개쇼 추천 상품</h3>
+                <p class="main__recommend--subTitle">Recommended Products</p>
+            </header>
+            <!-- 상품 카테고리 -->
+            <ul class="main__recommend--category" autocomplete="off" id="categoryWrap"></ul>
+            <!-- 개쇼추천상품리스트 -->
+            <div class="main__recommend--items" id="itemWrap"></div>
+        </section>
+        <!-- 오늘의워크스페이스, 인기워크스페이스 -->
+        <section class="main__workspace" id="todayWorks">
+            <!-- 오늘의워크스페이스 -->
+            <div class="main__workspace--item--wrapper">
+                <div class="main__workspace--item">
+                    <h3>오늘의 워크스페이스</h3>
+                    <p>Today's Workspace</p>
+                </div>
+                <div class="main__workspace--item">
+                    <figure>
+                        <img data-src class="main__workspace--img--background" id="firstThumbnail"  src="./res/img/icon_gaeshow.png" />
+                        <figcaption id="firstClick">
+                            <div class="main__workspace--item--big">
+                                <div>
+                                    <img src="res/img/icon_like.svg" />
+                                    <p id="firstLiked"></p>
+                                </div>
+                                <div>
+                                    <img src="res/img/icon_bookmark.svg" />
+                                    <p id="firstBookmark"></p>
+                                </div>
+                            </div>
+                            <div class="main__workspace--item--big">
+                                <h3 id="firstTitle">Today's Workspace</h3>
+                                <img id="firstProfileImage"  src="./res/img/icon_gaeshow.png"  />
+                                <p id="firstNickname">GAESHOW</p>
+                            </div>
+                            <div class="main__workspace--item--big">
+                                <p id="firstShare"></p>
+                                <p id="firstComment"></p>
+                                <p id="firstView"></p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="main__workspace--item">
+                    <figure>
+                        <img class="main__workspace--img--background" id="twoThumbnail"  src="./res/img/icon_gaeshow.png" />
+                        <figcaption id="twoClick">
+                            <div class="main__workspace--item--small">
+                                <h3 id="twoTitle">Today's Workspace</h3>
+                                <img id="twoProfileImage" src="./res/img/icon_gaeshow.png" />
+                                <p id="twoNickname">GAESHOW</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="main__workspace--item">
+                    <figure>
+                        <img class="main__workspace--img--background" id="threeThumbnail"  src="./res/img/icon_gaeshow.png" />
+                        <figcaption id="threeClick">
+                            <div class="main__workspace--item--small">
+                                <h3 id="threeTitle">Today's Workspace</h3>
+                                <img id="threeProfileImage" src="./res/img/icon_gaeshow.png" />
+                                <p id="threeNickname">GAESHOW</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- 인기워크스페이스 -->
+            <div class="main__workspace--item--wrapper">
+                <div class="main__workspace--item">
+                    <h3>인기 워크스페이스</h3>
+                    <p>Popular Workspace</p>
+                </div>
+                <div class="main__workspace--item" id="popularWrap" onerror="this.style.display='none'">
+                    <figure id="popularClick">
+                        <img class="main__workspace--img--background" id="popularImage" src="./res/img/icon_gaeshow.png" />
+                        <figcaption>
+                            <div class="main__workspace--item--big">
+                                <div>
+                                    <img src="res/img/icon_like.svg" />
+                                    <p id="popularLike"></p>
+                                </div>
+                                <div>
+                                    <img src="res/img/icon_bookmark.svg" />
+                                    <p id="popularBookmark"></p>
+                                </div>
+                            </div>
+                            <div class="main__workspace--item--big">
+                                <h3 id="popularTitle">Popular Workspace</h3>
+                                <img id="popularProfileImage" src="./res/img/icon_gaeshow.png" />
+                                <p id="popularNickname"></p>
+                            </div>
+                            <div class="main__workspace--item--big">
+                                <p id="popularShare"></p>
+                                <p id="popularComment"></p>
+                                <p id="popularView"></p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="main__workspace--item">
+                    <figure id="popularTwoClick">
+                        <img class="main__workspace--img--background" id="popularTwoImage"  src="./res/img/icon_gaeshow.png" />
+                        <figcaption>
+                            <div class="main__workspace--item--small">
+                                <h3 id="popularTwoTitle">Popular Workspace</h3>
+                                <img id="popularTwoProfileImage" src="./res/img/icon_gaeshow.png" />
+                                <p id="popularTwoNickname">GAESHOW</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="main__workspace--item">
+                    <figure id="popularThreeClick">
+                        <img class="main__workspace--img--background" id="popularThreeImage"  src="./res/img/icon_gaeshow.png" />
+                        <figcaption>
+                            <div class="main__workspace--item--small">
+                                <h3 id="popularThreeTitle">Popular Workspace</h3>
+                                <img id="popularThreeProfileImage" src="./res/img/icon_gaeshow.png"  />
+                                <p id="popularThreeNickname">GAESHOW</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- 개쇼 베스트 상품 -->
+        <section class="main__best" id="mainBest">
+            <header>
+                <h3 class="main__best--title">개쇼 베스트 상품</h3>
+                <p class="main__best--subTitle">Best Products</p>
+            </header>
+            <!-- 상품 카테고리 -->
+            <ul class="main__best--category" id="bestCategoryWrap"></ul>
+            <!-- 개쇼 베스트 상품 -->
+            <div class="main__best--items" id="itemBestWrap">
+
+            </div>
+
+        </section>
+        <section class="main__keywords" id="mainKeywords">
+            <header class="keywords__header">
+                <h3 class="keywords__header--title">오늘의 인기 키워드</h3>
+                <p class="keywords__header__subTitle">Today's Popular Keywords</p>
+            </header>
+            <div class="keywords__body" id="todayKeyword">
+                <!-- <div class="keywords__item">
+                    <p class="keywords__item--rank">01</p>
+                    <p class="keywords__item--title">애플 키보드</p>
+                    <p class="keywords__item--triangle red">▲</p>
+                    <p class="keywords__item--numericChange red">10</p>
+                </div>
+                <div class="keywords__item">
+                    <p class="keywords__item--rank">01</p>
+                    <p class="keywords__item--title">애플 키보드</p>
+                    <p class="keywords__item--triangle red">▲</p>
+                    <p class="keywords__item--numericChange red">10</p>
+                </div>
+                <div class="keywords__item">
+                    <p class="keywords__item--rank">01</p>
+                    <p class="keywords__item--title">애플 키보드</p>
+                    <p class="keywords__item--triangle red">▲</p>
+                    <p class="keywords__item--numericChange red">10</p>
+                </div>
+                <div class="keywords__item">
+                    <p class="keywords__item--rank">01</p>
+                    <p class="keywords__item--title">애플 키보드</p>
+                    <p class="keywords__item--triangle red">▲</p>
+                    <p class="keywords__item--numericChange red">10</p>
+                </div>
+                <div class="keywords__item">
+                    <p class="keywords__item--rank">01</p>
+                    <p class="keywords__item--title">애플 키보드</p>
+                    <p class="keywords__item--triangle red">▲</p>
+                    <p class="keywords__item--numericChange red">10</p>
+                </div>
+
+                <div class="keywords__item">
+                    <p class="keywords__item--rank">01</p>
+                    <p class="keywords__item--title">애플 키보드</p>
+                    <p class="keywords__item--triangle blue">▼</p>
+                    <p class="keywords__item--numericChange blue">10</p>
+                </div>
+                <div class="keywords__item">
+                    <p class="keywords__item--rank">01</p>
+                    <p class="keywords__item--title">애플 키보드</p>
+                    <p class="keywords__item--triangle blue">▼</p>
+                    <p class="keywords__item--numericChange blue">10</p>
+                </div>
+                <div class="keywords__item">
+                    <p class="keywords__item--rank">01</p>
+                    <p class="keywords__item--title">애플 키보드</p>
+                    <p class="keywords__item--triangle blue">▼</p>
+                    <p class="keywords__item--numericChange blue">10</p>
+                </div>
+                <div class="keywords__item">
+                    <p class="keywords__item--rank">01</p>
+                    <p class="keywords__item--title">애플 키보드</p>
+                    <p class="keywords__item--triangle blue">▼</p>
+                    <p class="keywords__item--numericChange blue">10</p>
+                </div>
+                <div class="keywords__item">
+                    <p class="keywords__item--rank">01</p>
+                    <p class="keywords__item--title">애플 키보드</p>
+                    <p class="keywords__item--triangle blue">▼</p>
+                    <p class="keywords__item--numericChange blue">10</p>
+                </div>-->
+            </div> 
+        </section>
+
+    </main>
+    <article class="body__item sidebar__right">
+        <!-- <div class="article__item"></div> -->
+    </article>
+    <footer class="body__item footer" id="footer"></footer>
+
+</body>
+
+<script defer type="module" src="./js/on.load.js"></script>
+
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/ide.css">
+    <script src="http://d3js.org/d3.v5.min.js"></script>
+    <script>
+        window.GitpleConfig = {
+            appCode: '6EqaYP5HzUQ7wAiVDNMqvuQcQT2tf3',
+            userLnag: 'ko'
+        };
+        !function () { function e() { function e() { var e = t.contentDocument, a = e.createElement("script"); a.type = "text/javascript", a.async = !0, a.src = window[n] && window[n].url ? window[n].url + "/inapp-web/gitple-loader.js" : "https://app.gitple.io/inapp-web/gitple-loader.js", a.charset = "UTF-8", e.head && e.head.appendChild(a) } var t = document.getElementById(a); t || ((t = document.createElement("iframe")).id = a, t.style.display = "none", t.style.width = "0", t.style.height = "0", t.addEventListener ? t.addEventListener("load", e, !1) : t.attachEvent ? t.attachEvent("onload", e) : t.onload = e, document.body.appendChild(t)) } var t = window, n = "GitpleConfig", a = "gitple-loader-frame"; if (!window.Gitple) { document; var i = function () { i.ex && i.ex(arguments) }; i.q = [], i.ex = function (e) { i.processApi ? i.processApi.apply(void 0, e) : i.q && i.q.push(e) }, window.Gitple = i, t.attachEvent ? t.attachEvent("onload", e) : t.addEventListener("load", e, !1) } }();
+    </script>
+</head>
+
+<body>
+    <header class="body__item header" id="headerBanner"></header>
+    <nav class="body__item nav" id="headerNav"></nav>
+    <main class="body__item main">
+        <header class="header">
+            <h3>IDE, 언어 추천</h3>
+            <p>다른 사람들이 많이 쓰는 ide와 언어가 궁금하세요?</p>
+        </header>
+        <section class="category">
+            <button id="langBtn">언어</button>
+            <button id="ideBtn">Ide</button>
+            <div class="category__select">
+                <label>▼</label>
+                <select id="selector">
+                </select>
+            </div>
+        </section>
+        <section class="recommend">
+            <h3 class="recommend__header" id="title"></h3>
+            <p class="recommend__title">
+                <b id="subTitle">'VSCode'</b>를&nbsp;<b>선호</b>하는 개발자는&nbsp;<b id="developName"></b>입니다.
+            </p>
+            <div class="recommend__body">
+                <div>
+                    <h5>IDE 총 평점</h5>
+                    <p>사용자들이 평가한 Ide의 평점입니다.</p>
+                    <div class="recommend__body--sub">
+                        <div id="ratingWrap" class="recommend__body--ratingWrap"></div>
+                        <p><b id="rating"></b>&nbsp;/ 5</p>
+                    </div>
+                </div>
+                <div class="recommend__body--develop">
+                    <h5>개발자 선호도</h5>
+                    <p>개발자별 Ide선호도 입니다.</p>
+                    <div id="developChart"></div>
+                </div>
+                <div class="recommend__body--salary">
+                    <h5>경력별 선호도</h5>
+                    <p>경력별 Ide선호도 입니다.</p>
+                    <div id="carrerChart"></div>
+                </div>
+            </div>
+        </section>
+        <section class='appraisal'>
+            <header class="appraisal__header">
+                <h3 id="ideAdHeader">Ide 평가</h3>
+                <p>(<b id="commentCount">0</b>개)</p>
+                <!-- <div class="category__select">
+                    <label>▼</label>
+                    <select>
+                        <option value="0" selected>전체보기</option>
+                        <option value="1">개발자</option>
+                    </select>
+                </div> -->
+            </header>
+            <ul class="appraisal__list" id="commentWrap"> </ul>
+            <div class="body__item--paging" id="pageWrap">
+            </div>
+        </section>
+        <section class="add">
+            <header class="add__header">
+                <h3 id="commentHeader">리뷰 작성하기</h3>
+                <p><b>* </b>표시는 필수 입력 항목이오니 반드시 입력해주세요</p>
+            </header>
+            <div class="add__aver">
+                <h4>평점<b>*</b></h4>
+                <div>
+                    <div>
+                        <button class="empty" id="star1">★</button>
+                        <button class="empty" id="star2">★</button>
+                        <button class="empty" id="star3">★</button>
+                        <button class="empty" id="star4">★</button>
+                        <button class="empty" id="star5">★</button>
+                    </div>
+                    <h5>선택해주세요</h5>
+                </div>
+            </div>
+            <div class="add__input">
+                <div>
+                    <h4>장점</h4>
+                    <textarea placeholder="상품에 관련한 리뷰를 작성해주세요" id="advanceInput"></textarea>
+                </div>
+                <div>
+
+                    <h4>단점</h4>
+                    <textarea placeholder="상품에 관련한 리뷰를 작성해주세요" id="disadvanceInput"></textarea>
+                </div>
+            </div>
+            <div class="add__btn">
+                <button id="commentModifyDeleteBtn" class="hidden">취소하기</button>
+                <button id="commentAddBtn">완료하기</button>
+            </div>
+
+        </section>
+
+
+    </main>
+    <footer class="body__item footer" id="footer"></footer>
+</body>
+
+<script type="module" src="./js/on.load.js"></script>
+
+
+</html>

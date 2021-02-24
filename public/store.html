@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/store.css">
+    <script>
+        window.GitpleConfig = {
+            appCode: '6EqaYP5HzUQ7wAiVDNMqvuQcQT2tf3',
+            userLnag: 'ko'
+        };
+        !function () { function e() { function e() { var e = t.contentDocument, a = e.createElement("script"); a.type = "text/javascript", a.async = !0, a.src = window[n] && window[n].url ? window[n].url + "/inapp-web/gitple-loader.js" : "https://app.gitple.io/inapp-web/gitple-loader.js", a.charset = "UTF-8", e.head && e.head.appendChild(a) } var t = document.getElementById(a); t || ((t = document.createElement("iframe")).id = a, t.style.display = "none", t.style.width = "0", t.style.height = "0", t.addEventListener ? t.addEventListener("load", e, !1) : t.attachEvent ? t.attachEvent("onload", e) : t.onload = e, document.body.appendChild(t)) } var t = window, n = "GitpleConfig", a = "gitple-loader-frame"; if (!window.Gitple) { document; var i = function () { i.ex && i.ex(arguments) }; i.q = [], i.ex = function (e) { i.processApi ? i.processApi.apply(void 0, e) : i.q && i.q.push(e) }, window.Gitple = i, t.attachEvent ? t.attachEvent("onload", e) : t.addEventListener("load", e, !1) } }();
+    </script>
+</head>
+
+<body>
+    <header class="body__item header" id="headerBanner"></header>
+    <nav class="body__item nav" id="headerNav"></nav>
+    <main class="body__item main">
+        <nav class="nav" id="categoryWrap">
+            <p>스토어 카테고리</p>
+        </nav>
+        <section class="body">
+            <!-- <figure class="banner">
+                <img class="banner__img" src="./res/img/test1.png" />
+                <figcaption class="banner__order">
+                    <div class="focus"></div>
+                    <div></div>
+                    <div></div>
+                </figcaption>
+            </figure> -->
+
+            <div class="body__header">
+                <div class="body__header--count">
+                    전체 <b id="count">0</b>개
+                </div>
+                <div class="body__selects">
+                    <div class="body__select--wrapper">
+                        <label class="body__select--label">▼</label>
+                        <select class="body__select" autocomplete="off" id="storeFilter">
+                            <option value="new" selected>최신순</option>
+                            <option value="view">조회순</option>
+                            <option value="review">리뷰순</option>
+                            <option value="expectation">기대평순</option>
+                            <option value="qna">질문/응답순</option>
+                            <option value="share">공유순</option>
+                        </select>
+                    </div>
+
+                    <span>
+                        <div class="body__select--wrapper">
+                            <label class="body__select--label">▼</label>
+                            <select class="body__select" autocomplete="off" id="storeSearchFilter">
+                                <option value="brand" selected>브랜드명</option>
+                                <option value="name">제품명</option>
+                            </select>
+                        </div>
+                        <span>
+                            <figure class="category__search">
+                                <img src="./res/img/icon_search.svg" />
+                                <input id="searchText" type="text" value="" placeholder="검색어를 입력해주세요" />
+                            </figure>
+                            <button class="category__search--button" id="searchBtn">검색하기</button>
+                        </span>
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="body__item" id="itemWrap"></div>
+            <section class='paging'>
+                <div class="body__item--paging">
+                </div>
+            </section>
+        </section>
+
+    </main>
+    <article class="body__item sidebar__right">
+    </article>
+    <footer class="body__item footer" id="footer"></footer>
+</body>
+
+<script type="module" src="./js/on.load.js"></script>
+
+</html>

@@ -1,0 +1,113 @@
+// css를 묶어서 재사용 할 수 있는 모듈을 만들어 주는 파일
+
+@import './variables'; //변수 선언한 파일 가져오기
+
+//디바이스 별 반응형 웹
+@mixin half-tablet {
+    @media (max-width: #{$breakpoint-halfTablet + 1px}) {
+        //미디어 쿼리에서 변수 적용
+        @content; //믹스인이 사용 될 때 넘겨받는 콘텐드가 들어감
+    }
+}
+
+@mixin mobile {
+    @media (max-width :#{$breakpoint-mobile + 1px}) {
+        //미디어 쿼리에서 변수 적용
+        @content; //믹스인이 사용 될 때 넘겨받는 콘텐드가 들어감
+    }
+}
+
+@mixin tablet {
+    @media (max-width :#{$breakpoint-tablet + 1px}) {
+        @content;
+    }
+}
+
+@mixin bigTablet {
+    @media (max-width :#{$breakpoint-bigTablet + 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width :#{$breakpoint-desktop + 1px}) {
+        @content;
+    }
+}
+@mixin HiDP {
+    @media (max-width :#{$breakpoint-HiDP + 1px}) {
+        @content;
+    }
+}
+
+
+.paging {
+    display: flex;
+    flex-direction: column;
+}
+.body__item {
+    &--paging {
+        display: flex;
+        flex-direction: column;
+        margin: 3rem 0;
+
+        > * {
+            padding: 0 1rem;
+        }
+
+        > ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                cursor: pointer;
+                display: flex;
+                width: 1rem;
+                height: 1rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                > img {
+                    width: 1rem;
+                    height: 1rem;
+                }
+            }
+        }
+
+        &--wrapper {
+            display: flex;
+            flex-direction: row;
+            font-size: 1.5rem;
+            > a {
+                padding: 0 0.75rem;
+                text-decoration: none;
+                color: black;
+            }
+
+            .underbar {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@include desktop {
+}
+
+@include bigTablet {
+}
+
+@include mobile {
+    .body__item {
+        &--paging {
+            &--wrapper {
+                > a {
+                    padding: 0 0.5rem;
+                }
+            }
+        }
+    }
+}

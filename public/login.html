@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/login.css">
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="./res/library/kakao.js"></script>
+    <!-- <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"charset="utf-8"></script> -->
+    <script>
+        window.GitpleConfig = {
+            appCode: '6EqaYP5HzUQ7wAiVDNMqvuQcQT2tf3',
+            userLnag: 'ko'
+        };
+        !function () { function e() { function e() { var e = t.contentDocument, a = e.createElement("script"); a.type = "text/javascript", a.async = !0, a.src = window[n] && window[n].url ? window[n].url + "/inapp-web/gitple-loader.js" : "https://app.gitple.io/inapp-web/gitple-loader.js", a.charset = "UTF-8", e.head && e.head.appendChild(a) } var t = document.getElementById(a); t || ((t = document.createElement("iframe")).id = a, t.style.display = "none", t.style.width = "0", t.style.height = "0", t.addEventListener ? t.addEventListener("load", e, !1) : t.attachEvent ? t.attachEvent("onload", e) : t.onload = e, document.body.appendChild(t)) } var t = window, n = "GitpleConfig", a = "gitple-loader-frame"; if (!window.Gitple) { document; var i = function () { i.ex && i.ex(arguments) }; i.q = [], i.ex = function (e) { i.processApi ? i.processApi.apply(void 0, e) : i.q && i.q.push(e) }, window.Gitple = i, t.attachEvent ? t.attachEvent("onload", e) : t.addEventListener("load", e, !1) } }();
+    </script>
+</head>
+
+
+<body>
+    <header class="body__item header" id="headerBanner"></header>
+    <nav class="body__item nav" id="headerNav"></nav>
+    <main class="body__item main">
+        <div class="input__signin">
+            <h3 class="input__signin--title">로그인</h3>
+            <p class="input__signin--title--sub">Login</p>
+        </div>
+        <div class="input__signin">
+            <p class="input__signin--title--item">
+                이메일
+            </p>
+            <input class="input__signin--text" id="email" type="text" value="" placeholder="이메일을 입력해주세요." />
+        </div>
+        <div class="input__signin">
+            <p class="input__signin--title--item">
+                비밀번호
+            </p>
+            <input class="input__signin--text" id="password" type="password" value="" placeholder="비밀번호를 입력해주세요." />
+        </div>
+
+        <div class="input__signin">
+            <button class="input__signin--start" id="loginBtn">
+                로그인하기
+            </button>
+        </div>
+
+        <div class="input__signin">
+            <h3 class="input__signin--title">간편 로그인</h3>
+        </div>
+        <div class="input__signin" id="googleBtn">
+            <figure class="input__signin--google">
+                <img src="./res/img/icon_google.svg" />
+                <figcaption>Sign In With Google</figcaption>
+            </figure>
+        </div>
+        <div class="input__signin" id="kakaoBtn">
+            <figure class="input__signin--kakao">
+                <img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" />
+            </figure>
+        </div>
+        <!-- <div class="input__signin" id="naverBtn">
+            <figure class="input__signin--naver" id="naverIdLogin">
+            </figure>
+        </div> -->
+
+
+    </main>
+    <footer class="body__item footer" id="footer"></footer>
+</body>
+
+<script type="module" src="./js/on.load.js"></script>
+
+</html>

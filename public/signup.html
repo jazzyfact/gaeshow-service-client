@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/signup.css">
+    <link rel="stylesheet" type="text/css" href="./res/library/flatpickr/flatpickr.min.css">
+    <script src="res/library/flatpickr/flatpickr.js"></script>
+    <script>
+        window.GitpleConfig = {
+            appCode: '6EqaYP5HzUQ7wAiVDNMqvuQcQT2tf3',
+            userLnag: 'ko'
+        };
+        !function () { function e() { function e() { var e = t.contentDocument, a = e.createElement("script"); a.type = "text/javascript", a.async = !0, a.src = window[n] && window[n].url ? window[n].url + "/inapp-web/gitple-loader.js" : "https://app.gitple.io/inapp-web/gitple-loader.js", a.charset = "UTF-8", e.head && e.head.appendChild(a) } var t = document.getElementById(a); t || ((t = document.createElement("iframe")).id = a, t.style.display = "none", t.style.width = "0", t.style.height = "0", t.addEventListener ? t.addEventListener("load", e, !1) : t.attachEvent ? t.attachEvent("onload", e) : t.onload = e, document.body.appendChild(t)) } var t = window, n = "GitpleConfig", a = "gitple-loader-frame"; if (!window.Gitple) { document; var i = function () { i.ex && i.ex(arguments) }; i.q = [], i.ex = function (e) { i.processApi ? i.processApi.apply(void 0, e) : i.q && i.q.push(e) }, window.Gitple = i, t.attachEvent ? t.attachEvent("onload", e) : t.addEventListener("load", e, !1) } }();
+    </script>
+</head>
+
+<body>
+    <header class="body__item header">
+        <section class="header__item--banner" id="headerBanner"></section>
+    </header>
+    <nav class="body__item nav" id="headerNav"></nav>
+    <main class="body__item main">
+        <header>
+            <h3 id="title">회원가입</h3>
+            <p id="subTitle">Sign Up</p>
+        </header>
+        <div class="div__step">
+            <div class="div__step--one focus" id="step1">
+                <p>STEP 01</p>
+                <hr />
+            </div>
+            <div class="div__step--two unfocus" id="step2">
+                <p>STEP 02</p>
+                <hr />
+            </div>
+        </div>
+        <form name="signupForm" action="" method="POST" onsubmit=null>
+            <section class="div__signup--step1 " id="stepOne">
+                <p class="p__warning">
+                    <b>*</b>
+                    표시는 필수입력 항목이오니 반드시 입력해주세요.
+                </p>
+                <div>
+                    <p class="p__warning--bold">
+                        이메일
+                        <b>*</b>
+                    </p>
+                    <input class="input__signup--text" id="email" type="text" value="" placeholder="이메일을 입력해주세요." />
+                </div>
+                <div>
+                    <p class="p__warning--bold">
+                        비밀번호
+                        <b>*</b>
+                    </p>
+                    <input class="input__signup--text" id="pw" type="password" value=""
+                        placeholder="영문,숫자와 기호를 포함한 8~20자" />
+                </div>
+                <div>
+                    <p class="p__warning--bold">
+                        비밀번호 확인
+                        <b>*</b>
+                    </p>
+                    <input class="input__signup--text" id="pw2" type="password" value=""
+                        placeholder="비밀번호를 다시한번 입력해주세요." />
+                </div>
+                <div>
+                    <p class="p__warning--bold">
+                        닉네임
+                        <b>*</b><b id="nickChecker"></b>
+                    </p>
+                    <input class="input__signup--text" id="nick" type="text" value=""
+                        placeholder="사용하실 닉네임을 입력해주세요 (1~10자)" />
+                </div>
+                <div>
+                    <p class="p__warning--bold">
+                        프로필 사진
+                    </p>
+                    <div class="input__signup--imgWrapper">
+
+                        <img class="input__signup--img hidden" id="profileImg" src="" for="profileInput" />
+                        <label class="input__signup--label" id="profileLabel" for="profileInput">
+                            <b>+</b>
+                            이미지 선택하기
+                        </label>
+                        <input class="input__signup--file" id="profileInput" type="file" />
+                    </div>
+                </div>
+
+                <div class="input__signup--button" id="nextBtn" onclick="next()">
+                    회원가입 하기
+                </div>
+            </section>
+
+            <section class="div__signup--step2  hidden" id="stepTwo">
+                <p class="p__warning">
+                    STEP 02의 항목들은 <b>선택 사항</b>입니다.
+                </p>
+                <div class="input__signup--select--wrapper">
+                    <p class="p__warning--bold">
+                        생년월일
+                    </p>
+                    <input class="input__signup--text flatpickr flatpickr-input" id="birthday" type="text" value=""
+                        placeholder="생년월일을 선택해주세요" readonly />
+                </div>
+                <div class="input__signup--select--wrapper">
+                    <p class="p__warning--bold">
+                        직종
+                    </p>
+                    <label class="input__signup--select--label">▼</label>
+                    <select class="input__signup--select" id="jobSelector" autocomplete="off">
+                        <option value="" disabled selected>재직하고 계신 직종을 선택해주세요.</option>
+                    </select>
+                </div>
+                <div class="input__signup--select--wrapper">
+                    <p class="p__warning--bold">
+                        업무분야
+                    </p>
+                    <label class="input__signup--select--label">▼</label>
+                    <select class="input__signup--select" id="jobDetailSelector" autocomplete="off">
+                        <option value="" disabled selected>직종 먼저 선택해주세요.</option>
+                    </select>
+                </div>
+                <div>
+                    <p class="p__warning--bold">
+                        성별
+                    </p>
+                    <div class="input__signup--gender">
+                        <div id="man">남자</div>
+                        <div id="woman">여자</div>
+                    </div>
+                </div>
+                <div class="input__signup--select--wrapper">
+                    <p class="p__warning--bold">
+                        총 경력
+                    </p>
+                    <label class="input__signup--select--label">▼</label>
+                    <select class="input__signup--select" id="periodSelector" autocomplete="off">
+                        <option value="" disabled selected>경력을 선택해주세요</option>
+                        <option value="0">신입</option>
+                        <option value="1">1년</option>
+                        <option value="2">2년</option>
+                        <option value="3">3년</option>
+                        <option value="4">4년</option>
+                        <option value="5">5년</option>
+                        <option value="6">6년</option>
+                        <option value="7">7년</option>
+                        <option value="8">8년</option>
+                        <option value="9">9년</option>
+                        <option value="10">10년 이상</option>
+                    </select>
+                </div>
+                <div class="input__signup--select--wrapper">
+                    <p class="p__warning--bold">
+                        근무지역
+                    </p>
+                    <div class="input__signup--select--double">
+                        <div>
+                            <label class="input__signup--select--label">▼</label>
+                            <select class="input__signup--select" id="workingPlaceSelector" autocomplete="off">
+                                <option value="" disabled selected>근무하시는 지역을 선택해주세요.</option>
+                                <option value="서울특별시">서울특별시</option>
+                                <option value="부산광역시">부산광역시</option>
+                                <option value="대구광역시">대구광역시</option>
+                                <option value="인천광역시">인천광역시</option>
+                                <option value="광주광역시">광주광역시</option>
+                                <option value="울산광역시">울산광역시</option>
+                                <option value="세종특별자치시">세종특별자치시</option>
+                                <option value="경기도">경기도</option>
+                                <option value="강원도">강원도</option>
+                                <option value="충청북도">충청북도</option>
+                                <option value="충청남도">충청남도</option>
+                                <option value="전라북도">전라북도</option>
+                                <option value="전라남도">전라남도</option>
+                                <option value="경상북도">경상북도</option>
+                                <option value="경상남도">경상남도</option>
+                                <option value="제주특별자치도">제주특별자치도</option>
+                            </select>
+                        </div>
+                        <div class="hidden" id="workingDetailPlace">
+                            <label class="input__signup--select--label">▼</label>
+                            <select class="input__signup--select" id="workingDetailPlaceSelector" autocomplete="off">
+                                <option value="" disabled selected>구 선택</option>
+                                <option value="종로구">종로구</option>
+                                <option value="중구">중구</option>
+                                <option value="용산구">용산구</option>
+                                <option value="성동구">성동구</option>
+                                <option value="광진구">광진구</option>
+                                <option value="동대문구">동대문구</option>
+                                <option value="중랑구">중랑구</option>
+                                <option value="성북구">성북구</option>
+                                <option value="강북구">강북구</option>
+                                <option value="도봉구">도봉구</option>
+                                <option value="노원구">노원구</option>
+                                <option value="은평구">은평구</option>
+                                <option value="서대문구">서대문구</option>
+                                <option value="마포구">마포구</option>
+                                <option value="양천구">양천구</option>
+                                <option value="강서구">강서구</option>
+                                <option value="구로구">구로구</option>
+                                <option value="금천구">금천구</option>
+                                <option value="영등포구">영등포구</option>
+                                <option value="동작구">동작구</option>
+                                <option value="관악구">관악구</option>
+                                <option value="서초구">서초구</option>
+                                <option value="강남구">강남구</option>
+                                <option value="강서구">강서구</option>
+                                <option value="송파구">송파구</option>
+                                <option value="강동구">강동구</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="p__warning--bold">
+                        기본급여
+                    </p>
+                    <input class="input__signup--text--short" id="payInput" type="text" value=""
+                        placeholder="급여 정보를 작성해주세요." />
+                    <span class="input__signup--text--shorttext">
+                        만원
+                    </span>
+                </div>
+                <div class="input__signup--select--wrapper">
+                    <p class="p__warning--bold">
+                        근속정보
+                    </p>
+                    <label class="input__signup--select--label">▼</label>
+                    <select class="input__signup--select" id="continuePeriodSelector" autocomplete="off">
+                        <option value="" disabled selected>근속 정보를 선택해주세요</option>
+                        <option value="0">신입</option>
+                        <option value="1">1년</option>
+                        <option value="2">2년</option>
+                        <option value="3">3년</option>
+                        <option value="4">4년</option>
+                        <option value="5">5년</option>
+                        <option value="6">6년</option>
+                        <option value="7">7년</option>
+                        <option value="8">8년</option>
+                        <option value="9">9년</option>
+                        <option value="10">10년 이상</option>
+                    </select>
+                </div>
+                <div>
+                    <p class="p__warning--bold">
+                        개발 언어
+                    </p>
+                    <div class="input__signup--subbox" id="langItemWrapper">
+                        <p class="input__signup--subbox--add" id="addLang">+</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="p__warning--bold">
+                        자주 사용하는 IDE
+                    </p>
+                    <div class="input__signup--subbox" id="ideItemWrapper">
+                        <p class="input__signup--subbox--add" id="addIde">+</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="p__warning--bold">
+                        Github URL
+                    </p>
+                    <input class="input__signup--text" id="githubUrlInput" type="text" value=""
+                        placeholder="Github 주소를 작성해주세요." />
+                </div>
+                <div>
+                    <p class="p__warning--bold">
+                        개인 포트폴리오 URL
+                    </p>
+                    <input class="input__signup--text" id="portfolioUrlInput" type="text" value=""
+                        placeholder="개인포트폴리오 주소를 작성해주세요." />
+                </div>
+                <div>
+                    <input type="checkbox" id="infoOpen" />
+                    <span>
+                        개인정보 공개
+                    </span>
+                </div>
+                <div>
+                    <input type="checkbox" id="pushAgree" />
+                    <span>
+                        푸시 알림 동의
+                    </span>
+                </div>
+                <div class="input__signup--button" id="signupBtn">
+                    추가 정보 입력 완료
+                </div>
+            </section>
+        </form>
+    </main>
+    <footer class="body__item footer" id="footer"></footer>
+</body>
+
+<script type="module" src="./js/on.load.js"></script>
+<!-- 테스트용 스크립트 -->
+<script>
+    const next = () => {
+        document.querySelector(".div__signup--step1").classList.add("hidden")
+        document.querySelector(".div__signup--step2").classList.remove("hidden")
+    }
+
+
+</script>
+
+</html>

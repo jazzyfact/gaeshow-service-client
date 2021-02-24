@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="203" height="40" viewBox="0 0 203 40" preserveAspectRatio="none slice">
+    <g>
+        <text font-family="AvenirNextCondensed-HeavyItalic, Avenir Next Condensed" font-size="29px" font-style="italic" font-weight="800" transform="translate(-361 -100) translate(361 129)">
+            <tspan x="0" y="0">GAESHOW</tspan>
+        </text>
+        <text fill="#a3a3a3" font-family="AvenirNextCondensed-Medium, Avenir Next Condensed" font-size="12px" font-weight="500" transform="translate(-361 -100) translate(491 117)">
+            <tspan x="0" y="0">DEVELOPER</tspan><tspan x="0" y="14">SHOPPING MALL</tspan>
+        </text>
+    </g>
+</svg>

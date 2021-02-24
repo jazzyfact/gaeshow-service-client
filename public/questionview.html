@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/question.css">
+    <script>
+        window.GitpleConfig = {
+            appCode: '6EqaYP5HzUQ7wAiVDNMqvuQcQT2tf3',
+            userLnag: 'ko'
+        };
+        !function () { function e() { function e() { var e = t.contentDocument, a = e.createElement("script"); a.type = "text/javascript", a.async = !0, a.src = window[n] && window[n].url ? window[n].url + "/inapp-web/gitple-loader.js" : "https://app.gitple.io/inapp-web/gitple-loader.js", a.charset = "UTF-8", e.head && e.head.appendChild(a) } var t = document.getElementById(a); t || ((t = document.createElement("iframe")).id = a, t.style.display = "none", t.style.width = "0", t.style.height = "0", t.addEventListener ? t.addEventListener("load", e, !1) : t.attachEvent ? t.attachEvent("onload", e) : t.onload = e, document.body.appendChild(t)) } var t = window, n = "GitpleConfig", a = "gitple-loader-frame"; if (!window.Gitple) { document; var i = function () { i.ex && i.ex(arguments) }; i.q = [], i.ex = function (e) { i.processApi ? i.processApi.apply(void 0, e) : i.q && i.q.push(e) }, window.Gitple = i, t.attachEvent ? t.attachEvent("onload", e) : t.addEventListener("load", e, !1) } }();
+    </script>
+</head>
+
+<body>
+    <header class="body__item header" id="headerBanner"></header>
+    <nav class="body__item nav" id="headerNav"></nav>
+    <main class="body__item main">
+        <header class="header">
+            <h3>고객센터</h3>
+            <nav>
+                <a href="/notice.html">공지사항</a>
+                <a href="/faq.html">자주 하는 질문</a>
+                <a class="focus" href="/question.html">문의하기</a>
+                <a href="/report.html">신고목록 조회</a>
+            </nav>
+        </header>
+
+        <section class="question">
+            <h3 id="title"></h3>
+            <p class="question__des" id="des"></p>
+            <p class="question__content" id="content"></p>
+        </section>
+
+        <section class="comment">
+            <h4>답변</h4>
+            <div class="comment__item">
+                <p id="reContent"></p>
+                <p id="reDes"></p>
+                <h5 id="reNickname"></h5>
+            </div>
+            <!-- <section class="comment__add">
+                <textarea></textarea>
+                <button>등록하기</button>
+            </section> -->
+        </section>
+        <section class="button">
+            <a href="/question.html">
+                <button>목록보기</button>
+            </a>
+        </section>
+
+
+    </main>
+    <footer class="body__item footer" id="footer"></footer>
+</body>
+
+<script type="module" src="./js/on.load.js"></script>
+
+</html>

@@ -1,0 +1,86 @@
+//변수들을 선언 해 놓음
+// _ 언더바를 붙여야 파일단위로 분리 되어 컴파일 되지 않음
+
+// Breakpoints
+$breakpoint-halfTablet: 320px;
+$breakpoint-mobile: 420px;
+$breakpoint-tablet: 768px;
+$breakpoint-bigTablet: 835px;
+$breakpoint-desktop: 1024px;
+$breakpoint-HiDP: 1440px;
+
+// 폰트
+@font-face {
+    font-family: 'notoR';
+    font-style: normal;
+    src: url('../../res/font/notoSans/NotoSans-Regular.woff2') format('woff2'), url('../../res/font/notoSans/NotoSans.woff') format('woff'),
+        url('../../res/font/notoSans/NotoSans-Regular.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'notoR-kr';
+    font-style: normal;
+    src: url('../../res/font/notoSansCJK/NotoSansCJKkr-Regular.woff2') format('woff2'), url('../../res/font/notoSansCJK/NotoSansCJKkr-Regular-Alphabetic.woff') format('woff'),
+        url('../../res/font/notoSansCJK/NotoSansCJKkr-Regular.ttf') format('truetype'), url('../../res/font/notoSansCJK/NotoSansCJKkr-Regular.eot') format('embedded-opentype');
+}
+
+// 메인
+$section__header--title--size: 2rem;
+$section__header--subTitle--size: 1rem;
+
+// 색상 변수
+$cw: white;
+$cb: black;
+
+.black {
+    color: #000000;
+}
+
+.blue {
+    color: #3a98ff;
+}
+.blue--bg {
+    background-color: #3a98ff;
+}
+
+.red {
+    color: #ff4d4d;
+}
+
+.red--bg {
+    background-color: #ea6672;
+}
+
+.pink {
+    color: #ff95c6;
+}
+.gray {
+    color: gray !important;
+}
+
+.yellow--light {
+    color: #ffe200;
+}
+
+.yellow--bg {
+    background-color: #f6cb61;
+}
+
+.orange--bg {
+    background-color: #ef9e68;
+}
+
+.purple--bg {
+    background-color: #bd52f2;
+}
+
+.green--bg {
+    background-color: #15c48b;
+}
+
+.black--border {
+    border: 1px solid black;
+}
+.gray--border {
+    border: 1px solid gray;
+}

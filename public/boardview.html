@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/portfolio__detail.css">
+    <link rel="stylesheet" type="text/css" href="./res/library/quill/dist/quill.snow.css">
+    <script src="./res/library/quill/dist/quill.js"></script>
+    <script>
+        window.GitpleConfig = {
+            appCode: '6EqaYP5HzUQ7wAiVDNMqvuQcQT2tf3',
+            userLnag: 'ko'
+        };
+        !function () { function e() { function e() { var e = t.contentDocument, a = e.createElement("script"); a.type = "text/javascript", a.async = !0, a.src = window[n] && window[n].url ? window[n].url + "/inapp-web/gitple-loader.js" : "https://app.gitple.io/inapp-web/gitple-loader.js", a.charset = "UTF-8", e.head && e.head.appendChild(a) } var t = document.getElementById(a); t || ((t = document.createElement("iframe")).id = a, t.style.display = "none", t.style.width = "0", t.style.height = "0", t.addEventListener ? t.addEventListener("load", e, !1) : t.attachEvent ? t.attachEvent("onload", e) : t.onload = e, document.body.appendChild(t)) } var t = window, n = "GitpleConfig", a = "gitple-loader-frame"; if (!window.Gitple) { document; var i = function () { i.ex && i.ex(arguments) }; i.q = [], i.ex = function (e) { i.processApi ? i.processApi.apply(void 0, e) : i.q && i.q.push(e) }, window.Gitple = i, t.attachEvent ? t.attachEvent("onload", e) : t.addEventListener("load", e, !1) } }();
+    </script>
+</head>
+
+<body>
+    <header class="body__item header" id="headerBanner"></header>
+    <nav class="body__item nav" id="headerNav"></nav>
+    <main class="body__item main">
+        <header class="header">
+            <div class="header__main">
+                <h3 id="title"></h3>
+                <p>
+                    <span id="date"></span>
+                    <span>조회수 <b id="viewCount"></b>회</span>
+                    <span>공유횟수 <b id="sharedCount"></b></span>
+                </p>
+            </div>
+            <div class="header__user">
+                <div class="header__user--stars">
+                    <figure id="likedBtn">
+                        <img id="likedImg" src="./res/img/icon_like_df.svg" />
+                        <figcaption id="liked">0</figcaption>
+                    </figure>
+                    <figure id="bookmarkedBtn">
+                        <img id="bookmarkedImg" src="./res/img/icon_bookmark_df.svg" />
+                        <figcaption id="bookmarked">0</figcaption>
+                    </figure>
+                </div>
+                <figure class="header__user--des">
+                    <img id="profileImg" src="./res/img/icon_google.svg" alt="프로필이미지" />
+                    <figcaption id="nickname"></figcaption>
+                    <figcaption id="writerInfo"></figcaption>
+                </figure>
+                <div class="header__user--ext" id="customWrap">
+                    <p id="shareBtn">공유하기</p>
+                    <p id="custom">게시글 신고하기</p>
+                </div>
+            </div>
+        </header>
+        <section class="document">
+            <div class="document__text" id="content"></div>
+            <div class="document__tools" id="tagsWrapper"></div>
+        </section>
+        <section class="comment">
+            <header class="comment__header">
+                <h4>
+                    댓글 (<b id="commentCount">0</b>개)
+                </h4>
+            </header>
+            <div class="comment__list" id="commentList">
+
+            </div>
+        </section>
+
+        <div class="body__item--paging" id="pagination"></div>
+
+        <article class="comment__add">
+            <textarea id="addCommentContent" placeholder="댓글은 최대 500자 까지 작성할 수 있습니다."></textarea>
+            <button id="addCommentBtn">등록하기</button>
+        </article>
+
+    </main>
+    <footer class="body__item footer" id="footer"></footer>
+</body>
+
+<script type="module" src="./js/on.load.js"></script>
+
+</html>

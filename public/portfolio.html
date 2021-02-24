@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+    <script>
+        window.GitpleConfig = {
+            appCode: '6EqaYP5HzUQ7wAiVDNMqvuQcQT2tf3',
+            userLnag: 'ko'
+        };
+        !function () { function e() { function e() { var e = t.contentDocument, a = e.createElement("script"); a.type = "text/javascript", a.async = !0, a.src = window[n] && window[n].url ? window[n].url + "/inapp-web/gitple-loader.js" : "https://app.gitple.io/inapp-web/gitple-loader.js", a.charset = "UTF-8", e.head && e.head.appendChild(a) } var t = document.getElementById(a); t || ((t = document.createElement("iframe")).id = a, t.style.display = "none", t.style.width = "0", t.style.height = "0", t.addEventListener ? t.addEventListener("load", e, !1) : t.attachEvent ? t.attachEvent("onload", e) : t.onload = e, document.body.appendChild(t)) } var t = window, n = "GitpleConfig", a = "gitple-loader-frame"; if (!window.Gitple) { document; var i = function () { i.ex && i.ex(arguments) }; i.q = [], i.ex = function (e) { i.processApi ? i.processApi.apply(void 0, e) : i.q && i.q.push(e) }, window.Gitple = i, t.attachEvent ? t.attachEvent("onload", e) : t.addEventListener("load", e, !1) } }();
+    </script>
+</head>
+
+<body>
+    <header class="body__item header" id="headerBanner"></header>
+    <nav class="body__item nav" id="headerNav"></nav>
+    <main class="body__item main">
+        <header class="header">
+            <h3 id="cateTitle"></h3>
+            <p id="cateExplain"></p>
+        </header>
+        <div class="category">
+            <div class="category--guidewrp">
+                <div class="category__guide">
+                    <div class="category__guide--circle purple--bg"></div>
+                    <p class="category__guide--title">플랫폼</p>
+                </div>
+                <div class="category__guide">
+                    <div class="category__guide--circle  blue--bg"></div>
+                    <p class="category__guide--title">언어</p>
+                </div>
+                <div class="category__guide">
+                    <div class="category__guide--circle green--bg"></div>
+                    <p class="category__guide--title">Ide</p>
+                </div>
+            </div>
+            <div class="category__select">
+                <label class="category__select--label">▼</label>
+                <select class="category__select--main" id="searchType" autocomplete="off">
+                    <option value="content" selected>내용</option>
+                    <option value="nickname">닉네임</option>
+                    <option value="tag">태그</option>
+                </select>
+            </div>
+            <figure class="category__search">
+                <img src="./res/img/icon_search.svg" />
+                <input type="text" id="searchText" value="" placeholder="검색어를 입력해주세요" />
+            </figure>
+            <button class="category__search--button" id="search">검색하기</button>
+        </div>
+        <section class="body" id="sectionBody">
+            <header class="body__header">
+                <p class="body__header--idx">#</p>
+                <p class="body__header--title">제목</p>
+                <p class="body__header--writer">작성자</p>
+                <p class="body__header--date">작성일</p>
+            </header>
+        </section>
+        <section class='paging'>
+            <button class="body__item--button" id="writeBtn">
+                <a id="writeA">글쓰기</a>
+            </button>
+            <div class="body__item--paging">
+            </div>
+        </section>
+
+    </main>
+    <footer class="body__item footer" id="footer"></footer>
+</body>
+
+<script type="module" src="./js/on.load.js"></script>
+<!-- 테스트용 스크립트 -->
+<script>
+    const next = () => {
+        document.querySelector(".div__signup--step1").classList.add("hidden")
+        document.querySelector(".div__signup--step2").classList.remove("hidden")
+    }
+
+
+</script>
+
+</html>

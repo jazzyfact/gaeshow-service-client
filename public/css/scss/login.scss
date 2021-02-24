@@ -1,0 +1,129 @@
+@import './reset'; // 브라우저별 다른 엘러먼트 속성값 초기화 시켜 주는 파일
+@import './ui'; //세부적인 아이템, 공통적으로 사용하는 아이템 들의 정의되어 있는 스타일 파일
+@import './default.scss'; //페이지 주요 큰틀에 관련된 레이아웃 설정 scss 파일
+
+.body__item:nth-child(1) {
+    grid-column: 1 / span 6; //1번 라인에서 6칸, 1열 ~ 6열까지
+}
+.body__item:nth-child(2) {
+    grid-column: 1 / span 6;
+}
+.body__item:nth-child(3) {
+    grid-column: 1 / span 6;
+}
+
+.body__item:nth-child(4) {
+    grid-column: 1 / span 6;
+}
+
+.main {
+    //nav 밑에 main
+    margin: 2rem auto;
+
+    margin-bottom: 30rem;
+    min-width: 30%; //반응형 웹에서 크기 조절 할 때 사용, 디바이스 크기가 30% 이하로 줄어드는거 방지
+    min-height: calc(100vh - 400px); //브라우저 높이에 맞게 크기를 계산한다.
+    .input__signin {
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        &--title {
+            //로그인 타이틀 표시
+            align-self: center;
+            font-size: $section__header--title--size;
+            &--sub {
+                //login sub 타이틀 표시
+                margin: 5px 0;
+                align-self: center;
+                font-size: $section__header--subTitle--size;
+                color: #909091;
+            }
+            &--item {
+                margin: 10px 0;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+        }
+        &--text {
+            //이메일 힌트 표시창
+            font-size: 1.2rem;
+            height: 2rem;
+            padding: 0.5rem 0 0.5rem 0.5rem;
+
+            border: 1px solid black; //텍스트 창 테두리
+
+            ::placeholder {
+                //힌트
+                color: #909091;
+            }
+        }
+
+        &--start {
+            //로그인하기 버튼
+            width: 100%;
+            height: 4rem;
+            background-color: black;
+            color: #dddddd;
+            border: none;
+
+            font-size: 1.3rem;
+
+            margin-bottom: 3rem;
+
+            cursor: pointer;
+        }
+
+        &--google {
+            cursor: pointer;
+            //구글 로그인하기 버튼
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: #2b2b2b;
+            border: 1px solid #707070;
+            font-size: 1.4rem;
+            font-weight: 500;
+            img {
+                width: 40px;
+                height: 40px;
+                padding: 5px 10px;
+            }
+        }
+        &--github {
+            //깃헙 로그인하기 버튼
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            background-color: black;
+            font-size: 1.4rem;
+            font-weight: 500;
+            img {
+                width: 40px;
+                height: 40px;
+                padding: 5px 10px;
+            }
+        }
+        &--kakao {
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: rgb(255, 235, 0);
+            img {
+                height: 50px;
+            }
+        }
+        &--naver {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: rgb(30, 200, 0);
+            img {
+                height: 50px;
+            }
+        }
+    }
+}

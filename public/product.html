@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/product.css">
+    <script src="http://d3js.org/d3.v5.min.js"></script>
+    <script>
+        window.GitpleConfig = {
+            appCode: '6EqaYP5HzUQ7wAiVDNMqvuQcQT2tf3',
+            userLnag: 'ko'
+        };
+        !function () { function e() { function e() { var e = t.contentDocument, a = e.createElement("script"); a.type = "text/javascript", a.async = !0, a.src = window[n] && window[n].url ? window[n].url + "/inapp-web/gitple-loader.js" : "https://app.gitple.io/inapp-web/gitple-loader.js", a.charset = "UTF-8", e.head && e.head.appendChild(a) } var t = document.getElementById(a); t || ((t = document.createElement("iframe")).id = a, t.style.display = "none", t.style.width = "0", t.style.height = "0", t.addEventListener ? t.addEventListener("load", e, !1) : t.attachEvent ? t.attachEvent("onload", e) : t.onload = e, document.body.appendChild(t)) } var t = window, n = "GitpleConfig", a = "gitple-loader-frame"; if (!window.Gitple) { document; var i = function () { i.ex && i.ex(arguments) }; i.q = [], i.ex = function (e) { i.processApi ? i.processApi.apply(void 0, e) : i.q && i.q.push(e) }, window.Gitple = i, t.attachEvent ? t.attachEvent("onload", e) : t.addEventListener("load", e, !1) } }();
+    </script>
+</head>
+
+<body>
+    <header class="body__item header" id="headerBanner"></header>
+    <nav class="body__item nav" id="headerNav"></nav>
+    <main class="body__item main">
+        <header class="header">
+            <p id="categoryName">.</p>
+        </header>
+        <div class="title">
+            <div class="large">
+                <seciton class="large__imgdes">
+                    <div>
+                        <figure class="large__imgdes--imgwrapper">
+                            <img class="large__imgdes--titleimg" id="titleImg" />
+                            <figcaption class="large__imgdes--titledes">
+                                <p>공유 <b id="sharedCount">0</b>회</p>
+                                <p>Q&A <b id="qnaCount">0</b>회</p>
+                            </figcaption>
+                        </figure>
+                        <div class="large__imgdes--deswrapper">
+                            <div class="large__imgdes--titlewrapper">
+                                <h3 id="titleName"></h3>
+                                <figure>
+                                    <img src="./res/img/icon_watch.svg" />
+                                    <figcaption id=viewCount>0</figcaption>
+                                </figure>
+                            </div>
+                            <h4 class="large__imgdes--price" id="price"></h4>
+                            <p class="large__imgdes--avg">리뷰 평점 <b id="averageScore">0.0</b></p>
+                            <div class="large__imgdes--under">
+                                <p>구매 전 기대평 <b id="exAver">0</b>개 &nbsp;&nbsp; 리뷰수 <b id="reviewCount">0</b>개</p>
+                                <button id="shareBtn">공유하기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="large__imgdes--page" id="naviImgWrap"></figure>
+
+                </seciton>
+            </div>
+            <div class="small">
+                <section class="small__exreview">
+                    <header class="small__exreview--header">
+                        <h4>구매전 기대평</h4>
+                        <button id="expectAddBtn">기대평 작성</button>
+                    </header>
+                    <ul class="small__exreview--body" id="expectWrap">
+                    </ul>
+                    <div class="small__exreview--page hidden" id="expectPaginationWrap"></div>
+                </section>
+            </div>
+        </div>
+        <div class="tabs">
+            <div class="large">
+                <header class="large__header" id="categoryWrap">
+                    <button class="focus" id="explainBtn">상품 상세 설명</button>
+                    <button id="reviewBtn">사용자 리뷰</button>
+                    <button id="qnaBtn">상품 Q&A</button>
+                    <button id="togetherBtn">함께 찾아본 상품</button>
+                </header>
+
+                <div class="large__name" id="contentHeader">
+                    <h3>상품 상세 설명</h3>
+                </div>
+                <div class="large__product" id="contentWrap">
+                    <textarea id="content" readonly></textarea>
+                </div>
+                <div class="large__name" id="reviewHeader">
+                    <h3>사용자 리뷰</h3>
+                </div>
+                <div class="large__user" id="review">
+                    <div class="large__user--review">
+                        <div class="large__user--review--header">
+                            <h4>구매전 기대평점</h4>
+                            <p id="expectationCount">(0개)</p>
+                        </div>
+                        <p>상품의 구매전 기대평점입니다.</p>
+                        <div class="large__user--review--star">
+                            <span id="exStarWrap"></span>
+                            <p><b id="expectationRate">0.0</b> / 5</p>
+                        </div>
+                    </div>
+                    <div class="large__user--review">
+                        <div class="large__user--review--header">
+                            <h4>구매후 평점</h4>
+                            <p id="averageScoreCount">(0개)</p>
+                        </div>
+                        <p>사용자들의 구매후 평점입니다.</p>
+                        <div class="large__user--review--star">
+                            <span id=reviewStarWrap></span>
+                            <p><b id="averageScoreRate">0.0</b> / 5</p>
+                        </div>
+                    </div>
+                    <div class="large__user--avg">
+                        <div class="large__user--avg--header">
+                            <h4>평점 비율</h4>
+                            <p>작성된 리뷰의 별점 비율입니다.</p>
+                        </div>
+                        <ul>
+                            <li class="large__user--avg--item" id="avg5">
+                                <p>5.0</p>
+                                <span>
+                                    <div class="back"></div>
+                                    <div class="fill"></div>
+                                </span>
+                                <p id="avgPercent">0%</p>
+                            </li>
+                            <li class="large__user--avg--item" id="avg4">
+                                <p>4.0</p>
+                                <span>
+                                    <div class="back"></div>
+                                    <div class="fill"></div>
+                                </span>
+                                <p id="avgPercent">0%</p>
+                            </li>
+                            <li class="large__user--avg--item" id="avg3">
+                                <p>3.0</p>
+                                <span>
+                                    <div class="back"></div>
+                                    <div class="fill"></div>
+                                </span>
+                                <p id="avgPercent">0%</p>
+                            </li>
+                            <li class="large__user--avg--item" id="avg2">
+                                <p>2.0</p>
+                                <span>
+                                    <div class="back"></div>
+                                    <div class="fill"></div>
+                                </span>
+                                <p id="avgPercent">0%</p>
+                            </li>
+                            <li class="large__user--avg--item" id="avg1">
+                                <p>1.0</p>
+                                <span>
+                                    <div class="back"></div>
+                                    <div class="fill"></div>
+                                </span>
+                                <p id="avgPercent">0%</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="large__avg" id="compareWrap"></div>
+                <div class="large__comment">
+                    <ul class="large__comment--list" id="reviewWrap"></ul>
+                    <div class="body__item--paging" id="reviewPagination"></div>
+                    <div class="large__comment--add">
+                        <div class="large__name">
+                            <h3 id="reviewAddTitle">리뷰 작성하기</h3>
+                        </div>
+                        <div class="large__comment--add--select">
+                            <div class="avg">
+                                <h5 class="title">상품 평점</h5>
+                                <p class="des">상품의 별점을 선택해주세요</p>
+                                <div class="star">
+                                    <span>
+                                        <button class="empty" id="reviewStar1">★</button>
+                                        <button class="empty" id="reviewStar2">★</button>
+                                        <button class="empty" id="reviewStar3">★</button>
+                                        <button class="empty" id="reviewStar4">★</button>
+                                        <button class="empty" id="reviewStar5">★</button>
+                                    </span>
+                                    <p>선택해주세요</p>
+                                </div>
+                            </div>
+                            <div class="reason">
+                                <h5 class="title">좋은 이유</h5>
+                                <p class="des">좋았던점을 선택해주세요.</p>
+                                <div class="box">
+                                    <p id="reviewTag1">성능</p>
+                                    <p id="reviewTag2">업무효율</p>
+                                    <p id="reviewTag3">가성비</p>
+                                    <p id="reviewTag4">디자인</p>
+                                    <p id="reviewTag5">품질</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="large__comment--imageView" id="commentAddImageView">
+                        </div>
+                        <div class="large__comment--add--input">
+                            <div>
+                                <label for="addFile">
+                                    <p>+</p>
+                                    <p>사진 첨부하기</p>
+                                </label>
+                                <input id="addFile" type="file" multiple
+                                    accept="image/png,image/jpg,image/jpeg,image/bmp,image/gif" />
+                            </div>
+                            <textarea id="commentTextArea" placeholder="댓글은 최대 500자 까지 작성할 수 있습니다."></textarea>
+                            <button id="commentAddBtn">등록하기</button>
+                            <button class="hidden" id="commentCancleBtn">취소하기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="large__qna" id="qnaHeader">
+                    <div class="large__name">
+                        <h3>상품 Q&A</h3>
+                        <p>총 <b id="qnaCommentCount">0</b>개</p>
+                        <!-- <div class="body__select--wrapper">
+                            <label class="body__select--label">▼</label>
+                            <select class="body__select" autocomplete="off">
+                                <option value="0" selected>조회순</option>
+                                <option value="1">리뷰순</option>
+                                <option value="2">기대평순</option>
+                                <option value="3">평점순</option>
+                                <option value="4">최저가</option>
+                                <option value="5">최고가</option>
+                            </select>
+                        </div> -->
+                    </div>
+                    <ul class="large__qna--comment" id="reviewCommentWrap"></ul>
+                    <div class="large__qna--new">
+                        <button id="qnaAddBtn">Q&A 쓰기</button>
+                    </div>
+                </div>
+                <div class="body__item--paging" id="qnaPagination"></div>
+                <!-- <div class="large__together" id="togetherHeader">
+                    <div class="large__name">
+                        <h3>함께 찾아본 상품</h3>
+                    </div>
+                    <div class="large__together--item">
+                        <div>
+                            <figure>
+                                <figcaption>
+                                    <p>공유 10K</p>
+                                    <p>Q&A 25개</p>
+                                </figcaption>
+                                <img src="./res/img/test.png" />
+                            </figure>
+                            <p class="title">MAGIC MOUSE 2 - 실버</p>
+                            <div>
+                                <p class="price">89000 ~</p>
+                                <p>리뷰 평점 4.0</p>
+                            </div>
+                            <p>구매 전 기대평 <b>132</b>개</p>
+                            <p>리뷰수 <b>12</b>개</p>
+                        </div>
+                        <div>
+                            <figure>
+                                <figcaption>
+                                    <p>공유 10K</p>
+                                    <p>Q&A 25개</p>
+                                </figcaption>
+                                <img src="./res/img/test.png" />
+                            </figure>
+                            <p class="title">MAGIC MOUSE 2 - 실버</p>
+                            <div>
+                                <p class="price">89000 ~</p>
+                                <p>리뷰 평점 4.0</p>
+                            </div>
+                            <p>구매 전 기대평 <b>132</b>개</p>
+                            <p>리뷰수 <b>12</b>개</p>
+                        </div>
+                        <div>
+                            <figure>
+                                <figcaption>
+                                    <p>공유 10K</p>
+                                    <p>Q&A 25개</p>
+                                </figcaption>
+                                <img src="./res/img/test.png" />
+                            </figure>
+                            <p class="title">MAGIC MOUSE 2 - 실버</p>
+                            <div>
+                                <p class="price">89000 ~</p>
+                                <p>리뷰 평점 4.0</p>
+                            </div>
+                            <p>구매 전 기대평 <b>132</b>개</p>
+                            <p>리뷰수 <b>12</b>개</p>
+                        </div>
+                        <div>
+                            <figure>
+                                <figcaption>
+                                    <p>공유 10K</p>
+                                    <p>Q&A 25개</p>
+                                </figcaption>
+                                <img src="./res/img/test.png" />
+                            </figure>
+                            <p class="title">MAGIC MOUSE 2 - 실버</p>
+                            <div>
+                                <p class="price">89000 ~</p>
+                                <p>리뷰 평점 4.0</p>
+                            </div>
+                            <p>구매 전 기대평 <b>132</b>개</p>
+                            <p>리뷰수 <b>12</b>개</p>
+                        </div>
+                    </div>
+
+                </div> -->
+
+            </div>
+            <div class="small">
+                <div class="small__header">데이터랩</div>
+                <div class="small__header--sub">성별 선호도</div>
+                <div class="small__gender" id="genderPie"></div>
+                <div class="small__header--sub">직군별 관심도</div>
+                <div class="small__job" id="developerBar"></div>
+                <div class="small__header--sub">해당 제품을 클릭한 횟수</div>
+                <div class="small__click">
+                    총 <b id="clickedProduct">0</b>회
+                </div>
+                <div class="small__header--sub">나이대별 관심도</div>
+                <div class="small__age" id="ageBar"></div>
+                <div class="small__header--sub">년차별 관심도</div>
+                <div class="small__job" id="experienceBar"></div>
+            </div>
+        </div>
+    </main>
+    <article class="body__item sidebar__right">
+    </article>
+    <footer class="body__item footer" id="footer"></footer>
+    <div class="modalWrap hidden" id="modalWrap"></div>
+    <div class="modalLargeImage hidden" id="modalLargeImage"></div>
+</body>
+
+<script type="module" src="./js/on.load.js"></script>
+
+</html>
