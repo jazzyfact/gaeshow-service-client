@@ -57,7 +57,7 @@ node-sass --watch public/css/scss --output public/css
    /images                         : 추천 이미지들이 위치
    /js                             : js 폴더
        /Controller                 : 모델과 뷰를 연결해주는 컨트롤러 폴더
-           users.controllers.js    : users.models.js에서 가져온 데이터를 users.view.js로 전달하는 파일,
+           usersControllers.js    : users.models.js에서 가져온 데이터를 users.view.js로 전달하는 파일,
                                      혹은 users.view.js의 이벤트를 model로 전달해주는 파일
        /Core                       : 프로젝트에 핵심이 되는 코드가 있는 폴더
             /Mvc                   : mvc패턴으로 정의할 부모클래스 파일들이 있는 폴더
@@ -67,9 +67,9 @@ node-sass --watch public/css/scss --output public/css
                 Singleton.js       : 로직과 관련된 싱글톤 파일
                 utils.js           : ui와 관련된 싱글톤 파일
        /Model                      : 서버 통신과 관련된 폴더
-           users.models.js         : 유저와 관련된 데이터를 로드할 때 사용하는 파일
+           usersModels.js         : 유저와 관련된 데이터를 로드할 때 사용하는 파일
        /View                       : 보여지는 것과 관련된 파일
-           users.view.js           :
+           usersView.js           :
        on.load.js                  : ../index.html 파일에서 유일하게 로드하는 파일
    index.html                      : 메인 html 파일
    login.html                      : 로그인 html 파일
@@ -88,7 +88,7 @@ README.md                          : 프로젝트와 관련된 내용을 적어�
 
 ```
 /_mixin.scss                        :   반응형 관련 파일
-/_variables.scss                    :   속석값에 들어갈 변수 정의 파일
+/_variables.scss                    :   속성값에 들어갈 변수 정의 파일
 /default.scss                       :   페이지 주요 큰틀에 관련된 레이아웃 설정 scss 파일
 /reest.scss                         :   브라우저별 다른 엘러먼트 속성값 초기화 시켜 주는 파일
 /ui.scss                            :   세부적인 아이템, 공통적으로 사용하는 아이템 들의 정의되어 있는 스타일 파일
