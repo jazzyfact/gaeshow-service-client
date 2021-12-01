@@ -54,6 +54,7 @@ https://www.instagram.com/gaeshow.official/
 - **메인페이지 반응형**
     
     [https://youtu.be/NrLzN6oB_jw](https://youtu.be/NrLzN6oB_jw)
+    [![Video Label](http://img.youtube.com/vi/NrLzN6oB_jw/0.jpg)](https://youtu.be/NrLzN6oB_jw)
     
 
 ## 💻기능
