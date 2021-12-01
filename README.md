@@ -48,12 +48,12 @@ https://www.instagram.com/gaeshow.official/
     - 개쇼 베스트 상품 기능
     - 오늘의 인기 키워드 기능
     
-    [https://youtu.be/0id_JC6f_dQ](https://youtu.be/0id_JC6f_dQ)
+   [![Video Label](http://img.youtube.com/vi/0id_JC6f_dQ/0.jpg)](https://youtu.be/0id_JC6f_dQ)
     
 
 - **메인페이지 반응형**
     
-    [https://youtu.be/NrLzN6oB_jw](https://youtu.be/NrLzN6oB_jw)
+    
     [![Video Label](http://img.youtube.com/vi/NrLzN6oB_jw/0.jpg)](https://youtu.be/NrLzN6oB_jw)
     
 
