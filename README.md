@@ -14,11 +14,10 @@
 
 - **GAESHOW Tistory**
 
-[개쇼](https://gaeshow.tistory.com/)
+(https://gaeshow.tistory.com/)
 
 - **GAESHOW Instagram**
-
-[](https://www.instagram.com/gaeshow.official/)
+(https://www.instagram.com/gaeshow.official/)
 
 ## ⏲️개발기간
 
